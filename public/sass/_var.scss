@@ -1,0 +1,43 @@
+@import 'color';
+@import url(https://fonts.googleapis.com/css?family=Itim&subset=thai,latin);
+
+$bg-web: white;
+
+$social: $blue;
+$social-dark: $blue-dark;
+$social-text: $blue-text;
+$social-text-dark: $blue-text-dark;
+
+$shopping: $green;
+$shopping-dark: $green-dark;
+$shopping-text: $green-text;
+$shopping-text-dark: $green-text-dark;
+
+$service: $purple;
+$service-dark: $purple-dark;
+$service-text: $purple-text;
+$service-text-dark: $purple-text-dark;
+
+$sale: $yellow;
+$sale-dark: $yellow-dark;
+$sale-text: $yellow-text;
+$sale-text-dark: $yellow-text-dark;
+
+$text: $blue-gray-text;
+$description-text: $gray-text;
+
+$tabs-bg: $green-text;
+$tabs-bg-dark: $green-text-dark;
+$tabs-text: $white;
+
+$btn-bg: $green-text;
+$btn-bg-hover: $green-text-dark;
+$btn-text: $white;
+
+$btn-blue-bg: $blue-text;
+$btn-blue-hover: $blue-text-dark;
+
+$text-dark: $blue-gray-text-dark;
+
+$font: Arial, Helvetica, sans-serif;
+$highlight-font: 'Itim', cursive;

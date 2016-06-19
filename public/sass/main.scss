@@ -1,0 +1,548 @@
+@import 'var';
+@import 'mixin';
+@import 'reset';
+@import 'input';
+
+.profile-image {
+	img {
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+	}
+
+	#profile-clip {
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		clip-path: url(#profile-cliping);
+	}
+}
+
+p, span, label, input, button, textarea, a, ul, li {
+	color: $text;
+	font-size: 15px;
+	line-height: 22px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: $text;
+	font-family: $highlight-font;
+}
+
+h1 {
+	font-size: 40px;
+	line-height: 50px;
+}
+
+h2 {
+	font-size: 30px;
+	line-height: 40px;
+}
+
+h3 {
+	font-size: 25px;
+	line-height: 35px;
+}
+
+h4 {
+	font-size: 20px;
+	line-height: 30px;
+}
+
+h5 {
+	font-size: 18px;
+	line-height: 28px;
+}
+
+#header {
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	padding: 5px 10px;
+	overflow: hidden;
+	position: fixed;
+	font-size: 0px;
+	background: white;
+	border-bottom: 3px solid $social-text-dark;
+	z-index: 1;
+	@include box-sizing();
+}
+
+#nav {
+	float: left;
+	padding: 0 10px;
+	position: relative;
+	text-align: center;
+	display: inline-block;
+
+	img {
+		height: 40px;
+	}
+}
+
+#menu {
+	float: right;
+	font-size: 0px;
+	position: relative;
+	background: $bg-web;
+	display: inline-block;
+	@include box-sizing();
+
+	.wrap {
+		width: 100%;
+		font-size: 0px;
+		text-align: center;
+		position: relative;
+		display: inline-block;
+
+		ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			position: relative;
+			display: inline-block;
+			overflow: hidden;
+
+			li.item {
+				float: left;
+				margin: 0px 3px;
+				position: relative;
+				overflow: hidden;
+
+				a {
+					height: 40px;
+					padding: 5px 10px;
+					padding-left: 50px;
+					font-size: 20px;
+					min-width: 100px;
+					line-height: 30px;
+					display: inline-block;
+					text-decoration: none;
+					background: left 5px center no-repeat;
+					background-size: 40px;
+					font-family: $highlight-font;
+
+					@include animate();
+					@include box-sizing();
+
+					&:after {
+						content: '';
+						left: 0px;
+						bottom: 0px;
+						width: 0%;
+						height: 2px;
+						position: absolute;
+
+						@include animate();
+						@include box-sizing();
+					}
+
+					&:hover:after {
+						width: 100%;
+					}
+				}
+
+				&.social a {
+					color: $social-text;
+					background-image: url('/images/icon-social.png');
+
+					&:after {
+						background: $social-text;
+					}
+				}
+
+				&.shopping a {
+					color: $shopping-text;
+					background-image: url('/images/icon-shopping.png');
+
+					&:after {
+						background: $shopping-text;
+					}
+				}
+
+				&.service a {
+					color: $service-text;
+					background-image: url('/images/icon-service.png');
+
+					&:after {
+						background: $service-text;
+					}
+				}
+
+				&.sale a {
+					color: $sale-text;
+					background-image: url('/images/icon-sale.png');
+
+					&:after {
+						background: $sale-text;
+					}
+				}
+			}
+		}
+	}
+}
+
+#wrapper {
+	width: 100%;
+	padding-top: 50px;
+	position: relative;
+}
+
+#overviews {
+	width: 100%;
+	padding: 20px;
+	position: relative;
+	background: $white;
+
+	@include box-sizing();
+
+	.wrap {
+		width: 100%;
+		margin: 0 auto;
+		max-width: 1000px;
+		position: relative;
+		overflow: hidden;
+
+		.left {
+			float: left;
+			width: 200px;
+			padding: 20px 10px;
+			padding-bottom: 0px;
+			position: relative;
+			@include box-sizing();
+
+			.profile-image {
+				width: 170px;
+				height: 170px;
+				margin: 0 auto;
+				position: relative;
+			}
+
+			h4 {
+				width: 100%;
+				height: 40px;
+				display: block;
+				line-height: 40px;
+				position: relative;
+				text-align: left;
+			}
+		}
+
+		.right {
+			float: right;
+			font-size: 0px;
+			padding: 20px 0;
+			min-width: 200px;
+			width: 100%;
+			max-width: 800px;
+			position: relative;
+			text-align: center;
+			
+			ul {
+				margin: 0px;
+				padding: 0px;
+				list-style: none;
+				position: relative;
+				display: inline-block;
+
+				li.item {
+					float: left;
+					width: 150px;
+					padding: 10px;
+					margin: 0px 5px;
+					position: relative;
+					@include box-sizing();
+
+					h3, a {
+						display: block;
+					}
+
+					a {
+						color: $btn-text;
+						padding: 5px;
+						height: 30px;
+						margin-top: 10px;
+						line-height: 20px;
+						background: $social-text;
+						font-size: 18px;
+						text-transform: capitalize;
+						text-decoration: none;
+						font-family: $highlight-font;
+						@include box-sizing();
+						@include animate();
+						@include border-radius(3px);
+
+						&:hover {
+							color: $text-dark;
+						}
+					}
+				}
+			}
+		}
+
+		.bottom {
+			float: left;
+			width: 100%;
+			position: relative;
+			padding: 10px 20px;
+			@include box-sizing();
+
+			p {
+				color: $description-text;
+			}
+		}
+	}
+}
+
+#content {
+	width: 100%;
+	position: relative;
+
+	.tabs {
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		position: absolute;
+		background: $social-text;
+
+		.wrap {
+			width: 100%;
+			margin: 0 auto;
+			max-width: 1000px;
+			position: relative;
+			text-align: center;
+
+			font-size: 0;
+
+			ul {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				position: relative;
+				display: inline-block;
+				overflow: hidden;
+
+				li.item {
+					float: left;
+					position: relative;
+
+					a {
+						color: $tabs-text;
+						display: block;
+						padding: 0 20px;
+						position: relative;
+						text-decoration: none;
+						@include animate();
+
+						&:hover {
+							background: $social-text-dark;
+						}
+
+						img {
+							height: 50px;
+							display: block;
+						}
+					}
+
+					&.active {
+						a {
+							background: $social-text-dark;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.contents {
+		width: 100%;
+		padding-top: 50px;
+		position: relative;
+		background: $white;
+
+		.wrap {
+			width: 100%;
+			padding: 20px;
+			position: relative;
+
+			@include box-sizing();
+
+			.list {
+				width: 100%;
+				margin: 0 auto;
+				max-width: 800px;
+				position: relative;
+
+				@include box-sizing();
+
+				ul {
+					margin: 0;
+					padding: 0;
+					width: 100%;
+					list-style: none;
+					position: relative;
+					overflow: hidden;
+
+					@include box-sizing();
+
+					li {
+						width: 100%;
+						padding: 10px;
+						position: relative;
+
+						@include box-sizing();
+
+						.post {
+							width: 100%;
+							position: relative;
+							background: white;
+							overflow: hidden;
+							border: 1px solid #eee;
+							@include border-radius(5px);
+							@include box-shadow(#eee, 0px, 0px, 5px)
+
+							.author {
+								width: 100%;
+								height: 90px;
+								padding: 10px;
+								position: relative;
+								@include box-sizing();
+
+								.profile-image {
+									top: 10px;
+									left: 10px;
+									width: 70px;
+									height: 70px;
+									position: absolute;
+								}
+
+								h4 {
+									width: 100%;
+									height: 30px;
+									display: block;
+									padding-top: 15px;
+									padding-left: 80px;
+									position: relative;
+								}
+
+								.time {
+									width: 100%;
+									height: 20px;
+									display: block;
+									padding-left: 80px;
+									position: relative;
+
+									span {
+										color: $gray-text;
+										font-size: 12px;
+										padding-right: 5px;
+										display: inline-block;
+									}
+								}
+							}
+
+							.image {
+								width: 100%;
+								position: relative;
+								overflow: hidden;
+
+								img {
+									float: left;
+									width: 100%;
+								}
+							}
+
+							.polls {
+								width: 100%;
+								padding: 10px 20px 10px 40px;
+								position: relative;
+								border-top: 1px solid $white-dark;
+								background: left 15px top 13px no-repeat;
+								background-size: 20px;
+								overflow: hidden;
+								@include box-sizing();
+
+								h5 {
+									float: left;
+									margin-right: 20px;
+									display: inline-block;
+								}
+
+								a {
+									float: right;
+									font-size: 18px;
+									text-decoration: none;
+									font-family: $highlight-font;
+
+									&:hover {
+										text-decoration: underline;
+									}
+								}
+							}
+
+							.description {
+								width: 100%;
+								padding: 10px 20px;
+								position: relative;
+								border-top: 1px solid $white-dark;
+								@include box-sizing();
+
+								p {
+									font-size: 14px;
+									max-height: 70px;
+									display: block;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.grid {
+				width: 100%;
+				max-width: 100%;
+				padding: 0 30px;
+				position: relative;
+
+				ul li {
+					float: left;
+					width: 300px;
+					padding: 10px;
+				}
+			}
+
+			.view-option {
+				top: 20px;
+				right: 20px;
+				width: 50px;
+				height: 50px;
+				position: absolute;
+				background: $social-text;
+				overflow: hidden;
+
+				@include border-radius(50%);
+
+				&:hover {
+					background: $social-text-dark;
+				}
+
+				a {
+					width: 100%;
+					height: 100%;
+					display: block;
+					position: relative;
+					background: url('/images/icon-list.png') center center no-repeat;
+					background-size: 40px;
+
+					&[data-view-mode='grid'] {
+						background-image: url('/images/icon-grid.png');
+					}
+				}
+			}
+		}
+	}
+}

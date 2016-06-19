@@ -1,0 +1,49 @@
+doctype html
+html
+	head
+		title= title
+		link(href='/css/main.css', rel='stylesheet')
+	body#mainApp
+		#header
+			#nav
+				img(src='/images/logo.png')
+			#menu
+				.wrap
+					ul
+						li.item.social
+							a(href='#social') Social
+						li.item.shopping 
+							a(href='#shopping') Shopping
+						li.item.service 
+							a(href='#service') Service
+						li.item.sale 
+							a(href='#sale') Sale
+		#wrapper(data-ui-view)
+
+		script(src='/lib/jquery/jquery.min.js')
+		script(src='/lib/masonry/dist/masonry.pkgd.min.js')
+		script(src='/lib/imagesloaded/imagesloaded.pkgd.min.js')
+		script(src='/lib/jQuery.dotdotdot/src/jquery.dotdotdot.min.js')
+
+		script(src='/lib/angular/angular.min.js')
+		script(src='/lib/angular-ui-router/release/angular-ui-router.min.js')
+		
+		script(src='/modules/core/core.client.module.js')
+		script(src='/modules/core/config/core.client.route.js')
+		script(src='/modules/core/directives/masonry.client.directive.js')
+		script(src='/modules/core/directives/stick.client.directive.js')
+		script(src='/modules/core/directives/dot.client.directive.js')
+
+		script(src='/modules/user/user.client.module.js')
+		script(src='/modules/user/controllers/profile.client.controller.js')
+
+		script(src='/modules/social/social.client.module.js')
+		script(src='/modules/social/config/social.client.route.js')
+		script(src='/modules/social/controllers/social.client.controller.js')
+		script(src='/modules/social/controllers/feeds.client.controller.js')
+		script(src='/modules/social/controllers/grid.client.controller.js')
+
+		script(src='/application.js')
+
+		//- script(src='/js/jquery.min.js')
+		//- script(src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js')

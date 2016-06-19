@@ -1,0 +1,33 @@
+doctype html
+html
+	head
+		title= title
+		link(href='/css/main.css', rel='stylesheet')
+		#nav
+			img(src='/images/logo.png')
+		#menu
+			.wrap
+				ul
+					li.item.social
+						a(href='#social') Social
+					li.item.shopping 
+						a(href='#shopping') Shopping
+					li.item.service 
+						a(href='#service') Service
+		#overviews(ng-include="'/modules/social/views/overview.jade'")
+		#content
+			block details
+		script(src='/lib/angular/angular.min.js')
+		script(src='/lib/angular-ui-router/release/angular-ui-router.min.js')
+		
+		script(src='/modules/core/module.js')
+		script(src='/modules/core/config/core.js')
+
+		script(src='/modules/social/module.js')
+		script(src='/modules/social/config/list.js')
+		script(src='/modules/social/controllers/list.js')
+		script(src='/modules/social/filters/list.js')
+
+		script(src='/application.js')
+		script(src='/js/jquery.min.js')
+		script(src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js')

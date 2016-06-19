@@ -1,0 +1,12 @@
+extends template/layout.jade
+
+block details
+	.contents
+		.wrap(ui-view)
+	.tabs
+		.wrap
+			include socials/tabs.jade
+	if username
+		h4= username
+	else
+		h4 signin
