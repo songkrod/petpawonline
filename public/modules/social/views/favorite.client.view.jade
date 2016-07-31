@@ -1,0 +1,9 @@
+.category(data-ng-repeat="category in categories")
+	label
+		h4 {{category.name}}
+		a(ng-click='selectAll($event)') select all
+	.wrap
+		.item(data-ng-repeat="pet in category.type | orderBy:'name'")
+			a(ng-click='selectItem($event)')
+				.image(style="background-image:url(/images/category/{{category.dir}}/{{pet.image}})")
+				h6 {{pet.name}}

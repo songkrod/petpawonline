@@ -3,29 +3,32 @@
 		.right
 			ul
 				li.item
-					h3 1,025
-					a(href='#follower') follower
+					h3 3
+					a(data-ui-sref='user.follower') follower
 				li.item
-					h3 308
-					a(href='#following') following
+					h3 2
+					a(data-ui-sref='user.following') following
 				li.item
-					h3 56
-					a(href='#friends') friends
+					h3 1
+					a(data-ui-sref='user.friend') friends
+			.bottom
+				p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo แอดมิชชั่น ยิมทิป ธุรกรรมอุปสงค์แชมพู แชมปิยองธุหร่ำทิป โพลารอยด์ตุ๊กวาฟเฟิล เพียบแปร้เซลส์ ปิยมิตรคาร์โก้พุทธศตวรรษโชว์รูม
 		.left
 			.profile-image
 				div(data-ng-include="'modules/user/views/profile.client.view.jade'")
 				img(src='/images/profile-bg.png')
 			h4 Petpaw Online
-		.bottom
-			p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo แอดมิชชั่น ยิมทิป ธุรกรรมอุปสงค์แชมพู แชมปิยองธุหร่ำทิป โพลารอยด์ตุ๊กวาฟเฟิล เพียบแปร้เซลส์ ปิยมิตรคาร์โก้พุทธศตวรรษโชว์รูม
+		.setting: a(data-ui-sref='user.setting', title='Settings'): img(src='/images/icon-setting.png')
 #content
 	.contents
 		.wrap(data-ui-view='content')
-	.tabs(data-stick-bar)
+	.tabs(data-stick-to='{"item":"#header"}', data-stick-bar)
 		.wrap
 			ul
-				li.item.active: a(data-ui-sref='social.feeds'): img(src='/images/icon-home.png')
-				li.item: a(data-ui-sref='social.favorite'): img(src='/images/icon-favorite.png')
-				li.item: a(href='#profile'): img(src='/images/icon-profile.png')
-				li.item: a(href='#activity'): img(src='/images/icon-activity.png')
-				li.item: a(href='#message'): img(src='/images/icon-message.png')
+				li.item: a(data-ui-sref='social.favorite', title='Favorites'): img(src='/images/icon-favorite.png')
+				li.item.active: a(data-ui-sref='social.feeds', title='Feeds'): img(src='/images/icon-home.png')
+				li.item: a(data-ui-sref='social.me', title='Profile'): img(src='/images/icon-profile.png')
+				li.item
+					a(data-ng-click='toggleActivity()', title='Activities'): img(src='/images/icon-activity.png')
+					#activity(data-ng-include="'modules/social/views/activity.client.view.jade'")
+				li.item: a(href='#message', title='Messages'): img(src='/images/icon-message.png')

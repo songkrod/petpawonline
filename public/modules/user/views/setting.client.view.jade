@@ -1,0 +1,31 @@
+.form
+	h2 Account Settings
+	.cropArea
+		img-crop(image='image', area-type='square')
+	label
+		span display name
+		input(type='text', name='input-display')
+	label
+		span first name
+		input(type='text', name='input-name')
+	label
+		span last name
+		input(type='text', name='input-lname')
+	label
+		span email
+		input(type='text', name='input-lname')
+	label
+		span mobile
+		input(type='text', name='input-mobile')
+	label
+		span address
+		textarea(name='input-address')
+	label
+		span province
+		select(name='input-province')
+			option -- Select Province --
+	label
+		span post code
+		input(type='text', name='input-post')
+	.console
+		button(type='button') done

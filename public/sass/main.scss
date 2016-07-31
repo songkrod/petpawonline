@@ -12,14 +12,25 @@
 		position: absolute;
 	}
 
-	#profile-clip {
+	.profile-clip {
 		top: 0px;
 		left: 0px;
 		width: 100%;
 		height: 100%;
 		position: absolute;
-		clip-path: url(#profile-cliping);
+
+		img {
+			top: 27% !important;
+			left: 16% !important;
+			width: 80% !important;
+			height: 80% !important;
+			position: absolute !important;
+		}
 	}
+}
+
+b {
+	font-weight: bold;
 }
 
 p, span, label, input, button, textarea, a, ul, li {
@@ -34,28 +45,49 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-	font-size: 40px;
-	line-height: 50px;
-}
-
-h2 {
-	font-size: 30px;
-	line-height: 40px;
-}
-
-h3 {
-	font-size: 25px;
+	font-size: 28px;
 	line-height: 35px;
 }
 
+h2 {
+	font-size: 22px;
+	line-height: 28px;
+}
+
+h3 {
+	font-size: 18px;
+	line-height: 25px;
+}
+
 h4 {
-	font-size: 20px;
-	line-height: 30px;
+	font-size: 16px;
+	line-height: 20px;
 }
 
 h5 {
-	font-size: 18px;
-	line-height: 28px;
+	font-size: 14px;
+	line-height: 18px;
+}
+
+label {
+	width: 100%;
+	display: block;
+	padding: 10px 0;
+	position: relative;
+
+	span {
+		width: 100%;
+		display: block;
+		position: relative;
+		text-transform: capitalize;
+	}
+}
+
+.console { 
+	width: 100%;
+	padding: 10px 0;
+	text-align: center;
+	position: relative;
 }
 
 #header {
@@ -70,23 +102,34 @@ h5 {
 	border-bottom: 3px solid $social-text-dark;
 	z-index: 1;
 	@include box-sizing();
+	@include user-select();
+
+	.wrap {
+		width: 100%;
+		max-width: 900px;
+		margin: 0 auto;
+		position: relative;
+		overflow: hidden;
+		text-align: center;
+	}
 }
 
 #nav {
-	float: left;
+	/*float: left;*/
 	padding: 0 10px;
 	position: relative;
 	text-align: center;
 	display: inline-block;
 
 	img {
-		height: 40px;
+		height: 60px;
 	}
 }
 
 #menu {
-	float: right;
+	/*float: right;*/
 	font-size: 0px;
+	margin-left: 50px;
 	position: relative;
 	background: $bg-web;
 	display: inline-block;
@@ -188,17 +231,18 @@ h5 {
 
 #wrapper {
 	width: 100%;
-	padding-top: 50px;
+	padding-top: 75px;
 	position: relative;
 }
 
 #overviews {
 	width: 100%;
-	padding: 20px;
+	padding: 0 20px;
 	position: relative;
 	background: $white;
 
 	@include box-sizing();
+	@include user-select();
 
 	.wrap {
 		width: 100%;
@@ -208,27 +252,30 @@ h5 {
 		overflow: hidden;
 
 		.left {
-			float: left;
+			float: right;
 			width: 200px;
-			padding: 20px 10px;
-			padding-bottom: 0px;
+			padding: 10px 0px;
+			margin-right: 30px;
 			position: relative;
 			@include box-sizing();
 
 			.profile-image {
-				width: 170px;
-				height: 170px;
+				width: 120px;
+				height: 120px;
 				margin: 0 auto;
 				position: relative;
 			}
 
 			h4 {
 				width: 100%;
-				height: 40px;
+				height: 20px;
 				display: block;
-				line-height: 40px;
+				line-height: 20px;
 				position: relative;
-				text-align: left;
+				text-align: center;
+				padding-left: 10px;
+				font-size: 16px;
+				@include box-sizing();
 			}
 		}
 
@@ -238,9 +285,9 @@ h5 {
 			padding: 20px 0;
 			min-width: 200px;
 			width: 100%;
-			max-width: 800px;
+			max-width: 650px;
 			position: relative;
-			text-align: center;
+			text-align: left;
 			
 			ul {
 				margin: 0px;
@@ -256,9 +303,14 @@ h5 {
 					margin: 0px 5px;
 					position: relative;
 					@include box-sizing();
+					text-align: center;
 
 					h3, a {
 						display: block;
+					}
+
+					img {
+						height: 60px;
 					}
 
 					a {
@@ -282,17 +334,37 @@ h5 {
 					}
 				}
 			}
+
+			.bottom {
+				float: left;
+				width: 100%;
+				position: relative;
+				padding: 10px 20px;
+				text-align: left;
+				display: none;
+				@include box-sizing();
+
+				p {
+					color: $description-text;
+				}
+			}
 		}
 
-		.bottom {
-			float: left;
-			width: 100%;
-			position: relative;
-			padding: 10px 20px;
-			@include box-sizing();
+		.setting {
+			bottom: 0px;
+			right: 150px;
+			width: 40px;
+			height: 40px;
+			position: absolute;
 
-			p {
-				color: $description-text;
+			a {
+				width: 100%;
+				height: 100%;
+				display: block;
+
+				img {
+					width: 100%;
+				}
 			}
 		}
 	}
@@ -309,6 +381,8 @@ h5 {
 		position: absolute;
 		background: $social-text;
 
+		@include user-select();
+
 		.wrap {
 			width: 100%;
 			margin: 0 auto;
@@ -324,7 +398,6 @@ h5 {
 				list-style: none;
 				position: relative;
 				display: inline-block;
-				overflow: hidden;
 
 				li.item {
 					float: left;
@@ -385,7 +458,7 @@ h5 {
 					width: 100%;
 					list-style: none;
 					position: relative;
-					overflow: hidden;
+					/*overflow: hidden;*/
 
 					@include box-sizing();
 
@@ -458,29 +531,54 @@ h5 {
 
 							.polls {
 								width: 100%;
-								padding: 10px 20px 10px 40px;
+								height: 30px;
+								line-height: 30px;
+								padding-left: 25px;
+								position: relative;
+								@include box-sizing();
+								font-weight: bold;
+
+								background: url(/images/icon-love-2.png) left top 3px no-repeat;
+								background-size: 20px;
+							}
+
+							.console {
+								width: 100%;
+								padding: 10px 20px;
 								position: relative;
 								border-top: 1px solid $white-dark;
-								background: left 15px top 13px no-repeat;
-								background-size: 20px;
 								overflow: hidden;
 								@include box-sizing();
 
-								h5 {
-									float: left;
-									margin-right: 20px;
-									display: inline-block;
-								}
-
 								a {
-									float: right;
+									float: left;
+									height: 40px;
+									display: block;
 									font-size: 18px;
+									line-height: 40px;
+									padding-left: 40px;
+									margin-right: 20px;
 									text-decoration: none;
 									font-family: $highlight-font;
+
+									background: left center no-repeat;
+									background-size: 35px;
 
 									&:hover {
 										text-decoration: underline;
 									}
+
+									span {
+										font: inherit;
+									}
+								}
+
+								.like-btn {
+									background-image: url(/images/icon-love-1.png);
+								}
+
+								.comment-btn {
+									background-image: url(/images/icon-comment.png);
 								}
 							}
 
@@ -493,9 +591,156 @@ h5 {
 
 								p {
 									font-size: 14px;
-									max-height: 70px;
 									display: block;
+									max-height: 70px;
 								}
+							}
+						}
+
+						.product {
+							width: 100%;
+							position: relative;
+							background: white;
+							padding: 20px 0;
+							border: 1px solid #eee;
+							
+							@include box-sizing();
+							@include border-radius(5px);
+							@include box-shadow(#eee, 0px, 0px, 5px);
+
+							a {
+								position: relative;
+								display: block;
+								overflow: hidden;
+							}
+
+							.left {
+								float: left;
+								width: 40%;
+								position: relative;
+
+								.image {
+									width: 100%;
+									position: relative;
+
+									img {
+										width: 100%;
+									}
+								}
+
+								.rate {
+									width: 125px;
+									height: 30px;
+									display: block;
+									margin: 0 auto;
+									overflow: hidden;
+									position: relative;
+
+									span {
+										float: left;
+										width: 25px;
+										height: 25px;
+										position: relative;
+										background: url(/images/icon-rate-1.png) center center no-repeat;
+										background-size: 40px;
+
+										&.active {
+											background-image: url(/images/icon-rate-2.png);
+											/*background-size: 40px;*/
+										}
+									}
+								}
+							}
+
+							.right {
+								float: left;
+								width: 60%;
+								position: relative;
+
+								.info-pack {
+									width: 100%;
+									font-size: 0;
+									position: relative;
+
+									h5 {
+										width: 110px;
+										display: inline-block;
+									}
+
+									span {
+										text-transform: capitalize;
+										display: inline-block;
+									}
+								}
+
+								.console {
+									padding: 15px;
+									text-align: center;
+									position: relative;
+									/*border-top: 1px solid $white-dark;*/
+
+									@include box-sizing();
+
+									button {
+										height: 50px;
+										font-size: 20px;
+										padding-left: 70px;
+										font-family: $highlight-font;
+										border: 1px solid $shopping-text;
+										background: left 10px center no-repeat $shopping-text;
+										background-size: 50px;
+
+										&:hover {
+											color: $white;
+											background-color: $shopping-text-dark;
+										}
+									}
+								}
+
+								.description {
+									width: 100%;
+									padding: 10px 20px;
+									position: relative;
+									/*border-top: 1px solid $white-dark;*/
+									@include box-sizing();
+
+									p {
+										font-size: 14px;
+										display: block;
+									}
+								}
+							}
+						}
+
+						.gift {
+							width: 100%;
+							position: relative;
+							background: white;
+							padding: 0;
+							overflow: hidden;
+							border: 1px solid #eee;
+							
+							@include box-sizing();
+							@include border-radius(5px);
+							@include box-shadow(#eee, 0px, 0px, 5px);
+
+							.image {
+								width: 100%;
+								position: relative;
+
+								img {
+									width: 100%;
+								}
+							}
+
+							h4 {
+								width: 100%;
+								height: 50px;
+								line-height: 50px;
+								display: block;
+								text-align: center;
+								background: $white;
+								border-top: 1px solid $white-dark;
 							}
 						}
 					}
@@ -512,6 +757,30 @@ h5 {
 					float: left;
 					width: 300px;
 					padding: 10px;
+
+					.post .console {
+						.like-btn span {
+							display: none;
+						}
+
+						.comment-btn {
+							float: right;
+						}
+					} 
+
+					.product {
+						.right {
+
+							h3 {
+								font-size: 20px;
+								text-align: center;
+							}
+
+							.info-pack.force-show {
+								display: block;
+							}
+						}
+					}
 				}
 			}
 
@@ -540,6 +809,736 @@ h5 {
 
 					&[data-view-mode='grid'] {
 						background-image: url('/images/icon-grid.png');
+					}
+				}
+			}
+
+			.information {
+				width: 100%;
+				padding: 0 50px;
+				position: relative;
+				@include box-sizing();
+
+				.info-box {
+					width: 100%;
+					padding: 20px 0;
+					position: relative;
+					@include box-sizing();
+
+					span {
+						width: 100%;
+						display: block;
+						position: relative;
+						padding-left: 20px;
+						text-transform: capitalize;
+						background: url("/images/icon-clock.png") left center no-repeat;
+						background-size: 20px;
+						@include box-sizing();
+					}
+
+					p {
+						padding: 10px 0;
+						text-indent: 30px;
+						text-align: justify;
+						text-align-last: left;
+					}
+				}
+			}
+
+			.product-detail {
+				width: 100%;
+				max-width: 1200px;
+				margin: 0 auto;
+				position: relative;
+				background: white;
+				padding: 20px 0;
+				border: 1px solid #eee;
+				overflow: hidden;
+				
+				@include box-sizing();
+				@include border-radius(5px);
+				@include box-shadow(#eee, 0px, 0px, 5px);
+
+				.left {
+					float: left;
+					width: 40%;
+					position: relative;
+
+					.image {
+						width: 100%;
+						position: relative;
+
+						img {
+							width: 100%;
+						}
+					}
+
+					.image-grid {
+						width: 100%;
+						position: relative;
+
+						img {
+							width: 50px;
+							margin: 5px;
+						}
+					}
+				}
+
+				.right {
+					float: left;
+					width: 60%;
+					position: relative;
+
+					.info-pack {
+						width: 100%;
+						font-size: 0;
+						position: relative;
+
+						h5 {
+							width: 110px;
+							display: inline-block;
+						}
+
+						span {
+							text-transform: capitalize;
+							display: inline-block;
+						}
+					}
+
+					.console {
+						padding: 15px;
+						text-align: center;
+						position: relative;
+						/*border-top: 1px solid $white-dark;*/
+
+						@include box-sizing();
+
+						button {
+							height: 50px;
+							font-size: 20px;
+							padding-left: 70px;
+							font-family: $highlight-font;
+							border: 1px solid $shopping-text;
+							background: left 10px center no-repeat $shopping-text;
+							background-size: 50px;
+
+							&:hover {
+								color: $white;
+								background-color: $shopping-text-dark;
+							}
+						}
+					}
+
+					.description {
+						width: 100%;
+						padding: 10px 20px;
+						position: relative;
+						/*border-top: 1px solid $white-dark;*/
+						@include box-sizing();
+
+						p {
+							font-size: 14px;
+							display: block;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#content #activity {
+	top: 100%;
+	right: 0px;
+	width: 400px;
+	margin-top: 15px;
+	padding: 20px 0;
+	position: absolute;
+	background: white;
+	display: none;
+	z-index: 10;
+
+	@include box-sizing();
+	@include border-radius(10px);
+	@include box-shadow(rgba(0, 0, 0, 0.3), 0px, 0px, 5px);
+
+	&:before {
+		top: -19px;
+		right: 30px;
+		content: '▲';
+		color: white;
+		font-size: 30px;
+		text-shadow: 0px -3px 5px rgba(0, 0, 0, 0.3);
+		position: absolute;
+
+		@include box-sizing();
+	}
+
+	ul {
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		position: relative;
+		display: inline-block;
+	}
+
+	li.item {
+		width: 100%;
+		display: block;
+		position: relative;
+		text-align: left;
+		border-bottom: 1px solid $white-dark;
+
+		@include box-sizing();
+
+		&:first-child {
+			border-top: 1px solid $white-dark;
+		}
+
+		a {
+			width: 100%;
+			min-height: 70px;
+			line-height: 50px;
+			padding: 10px;
+			position: relative;
+			display: inline-block;
+			background-color: white;
+			@include box-sizing();
+
+			&:hover {
+				background-color: #eee;
+			}
+		}
+
+		.profile-image {
+			top: 10px;
+			left: 10px;
+			width: 50px;
+			height: 50px;
+			position: absolute;
+		}
+
+		.description {
+			width: 100%;
+			padding-left: 80px;
+			position: relative;
+			@include box-sizing();
+		}
+
+		p {
+			padding: 5px 0;
+
+			b {
+				padding-right: 10px;
+			}
+		}
+
+		span {
+			width: 100%;
+			display: block;
+			font-size: 14px;
+			padding-left: 20px;
+			background: url('/images/icon-clock.png') left center no-repeat;
+			background-size: 20px;
+		}
+	}
+
+	li.more {
+		width: 100%;
+		height: 35px;
+		display: block;
+		position: relative;
+
+		a {
+			color: $text-dark;
+			width: 100%;
+			height: 35px;
+			display: block;
+			line-height: 35px;
+			position: relative;
+			text-decoration: none;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+body[data-page='shop'] {
+	#header {
+		border-bottom: 3px solid $shopping-text-dark;
+	}
+
+	#overviews .item a {
+		background: $shopping-text !important;
+	}
+
+	#content {
+		.tabs { 
+			background: $shopping-text;
+
+			 .wrap ul li.item.active a,  .wrap ul li.item:hover a {
+				background: $shopping-text-dark;
+			}
+		}
+
+		.contents {
+			.wrap {
+				.grid {
+					 ul li .product {
+					 	padding: 0;
+
+					 	.left, .right {
+					 		width: 100%;
+					 	}
+					 }
+
+					.info-pack, .description {
+						display: none;
+					}
+
+					.info-pack.force-show {
+						text-align: center;
+						display: block;
+
+						h5 {
+							display: none !important;
+						}
+
+						span {
+							color: $red-text;
+							height: 50px;
+							line-height: 50px;
+							padding-left: 40px;
+							background: url(/images/icon-price.png) left center no-repeat;
+							background-size: 40px;
+							font-size: 20px;
+						}
+					}
+				}
+
+				.view-option {
+					background: $shopping-text;
+				}
+			}
+		}
+	}
+}
+
+body[data-page='sale'] {
+	#header {
+		border-bottom: 3px solid $sale-text-dark;
+	}
+
+	#overviews .item a {
+		background: $sale-text !important;
+	}
+
+	#content {
+		.tabs { 
+			background: $sale-text;
+
+			 .wrap ul li.item.active a,  .wrap ul li.item:hover a {
+				background: $sale-text-dark;
+			}
+		}
+
+		.contents {
+			.wrap {
+				.grid {
+					 ul li .product {
+					 	padding: 0;
+
+					 	.left, .right {
+					 		width: 100%;
+					 	}
+					 }
+
+					.info-pack, .description {
+						display: none;
+					}
+				}
+
+				.view-option {
+					background: $sale-text;
+				}
+			}
+		}
+	}
+}
+
+body[data-page='service'] {
+	#header {
+		border-bottom: 3px solid $service-text-dark;
+	}
+
+	#overviews .item a {
+		background: $service-text !important;
+	}
+
+	#content {
+		.tabs { 
+			background: $service-text;
+
+			 .wrap ul li.item.active a,  .wrap ul li.item:hover a {
+				background: $service-text-dark;
+			}
+		}
+
+		.contents {
+			.wrap {
+				.grid {
+					 ul li .product {
+					 	padding: 0;
+
+					 	.left, .right {
+					 		width: 100%;
+					 	}
+					 }
+
+					.info-pack, .description {
+						display: none;
+					}
+				}
+
+				.view-option {
+					background: $service-text;
+				}
+			}
+		}
+	}
+}
+
+#content.page { 
+	.contents {
+		padding: 0;
+
+		.wrap {
+			width: 100%;
+			margin: 0 auto;
+			position: relative;
+
+			.form {
+				width: 100%;
+				max-width: 600px;
+				margin: 0 auto;
+				position: relative;
+			}
+		}
+	}
+}
+
+.friend {
+	width: 100%;
+	padding: 30px !important;
+	position: relative;
+	@include box-sizing();
+
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		position: relative;
+		display: inline-block;
+		overflow: hidden;
+
+		li.grid-item {
+			float: left;
+			width: 300px !important;
+			height: 100;
+			margin: 10px;
+			background: white;
+			position: relative;
+			@include box-sizing();
+			@include border-radius(5px);
+
+			.image {
+				float: left;
+				width: 80px;
+				height: 80px;
+				margin: 0 auto;
+				position: relative;
+				overflow: hidden;
+				background: center center no-repeat;
+				background-size: cover;
+
+				@include border-radius(50%);
+			}
+
+			.description {
+				float: right;
+				width: 170px;
+				position: relative;
+
+				h6 {
+					display: block;
+					text-align: left;
+				}
+
+				p {
+					color: $gray-text;
+					font-size: 12px;
+					line-height: 14px;
+				}
+			}
+		}
+	}
+}
+
+.category {
+	/*width: 100%;*/
+	max-width: 900px;
+	margin: 0 auto;
+	margin-bottom: 20px;
+	position: relative;
+	background: $social-dark;
+	overflow: hidden;
+	@include border-radius(3px);
+
+	label {
+		width: 100%;
+		padding: 10px;
+		position: relative;
+		background: $social-text;
+		border-bottom: 1px solid $social-text-dark;
+		@include box-sizing();
+
+		h4 {
+			color: $white;
+			display: inline;
+			margin-right: 10px;
+			text-transform: uppercase;
+		}
+
+		a {
+			color: $social-text;
+			height: 30px;
+			padding: 0 10px;
+			line-height: 30px;
+			display: inline-block;
+			background: $social-text-dark;
+			text-transform: uppercase;
+			font-size: 13px;
+			text-decoration: none;
+			@include border-radius(5px);
+
+			&:hover {
+				color: $social-text-dark;
+				background: $social;
+			}
+		}
+	}
+
+	.wrap {
+		padding: 10px 0 !important;
+		overflow: hidden;
+	}
+
+	.item {
+		float: left;
+		width: 150px;
+		position: relative;
+		cursor: pointer;
+
+		a {
+			width: 100%;
+			position: relative;
+			display: inline-block;
+		}
+
+		.image {
+			width: 100px;
+			height: 100px;
+			margin: 0 auto;
+			position: relative;
+			overflow: hidden;
+			border: 10px solid white;
+			background: center center no-repeat;
+			background-size: cover;
+
+			@include animate();
+			@include border-radius(50%);
+		}
+
+		h6 {
+			padding: 5px 0;
+			text-align: center;
+		}
+
+		&.selected {
+			.image {
+				border: 10px solid $social-text;
+			}
+		}
+	}
+}
+
+.cropArea {
+	background: #E4E4E4;
+	overflow: hidden;
+	width:500px;
+	height:350px;
+}
+
+.sale-feeds {
+	list-style: none;
+	width: 100%;
+	max-width: 1000px;
+	position: relative;
+	padding: 0;
+	margin: 0 auto;
+
+	li {
+		width: 100%;
+		display: inline-block;
+		position: relative;
+		background: white;
+		overflow: hidden;
+		border: 1px solid $white-dark;
+		margin-bottom: 20px;
+		@include border-radius(5px);
+		@include box-shadow(#eee, 0px, 0px, 5px)
+
+		a {
+			width: 100%;
+			height: 100px;
+			overflow: hidden;
+			display: block;
+			position: relative;
+			text-decoration: none;
+
+			.pet-image {
+				top: 0px;
+				left: 0px;
+				width: 150px;
+				height: 100px;
+				position: absolute;
+				background: center center no-repeat;
+				background-size: cover;
+			}
+
+			.detail {
+				width: 100%;
+				height: 100px;
+				padding: 0 150px;
+				position: relative;
+				@include box-sizing();
+
+				.w {
+					width: 100%;
+					height: 100%;
+					padding: 10px 20px;
+					position: relative;
+					@include box-sizing();
+				}
+
+				h4 {
+					width: 100%;
+					display: block;
+				}
+
+				.price-box {
+					left: 0px;
+					bottom: 0px;
+					width: 100%;
+					height: 50px;
+					padding: 0px 20px;
+					background: $white;
+					border-top: 1px solid $white-dark;
+					position: absolute;
+					overflow: hidden;
+					@include box-sizing();
+
+					span {
+						float: left;
+						height: 50px;
+						padding-left: 30px;
+						line-height: 50px;
+						margin-right: 10px;
+						display: inline-block;
+						font-size: 12px;
+						background: url(/images/icon-date.png) left center no-repeat;
+						background-size: 30px;
+
+						&.id {
+							background-image: url(/images/icon-id.png);
+						}
+
+						&.time {
+							background-image: url(/images/icon-time.png);
+						}
+
+						&.province {
+							background-image: url(/images/icon-location.png);
+						}
+					}
+
+					h4 {
+						color: $red-text;
+						float: right;
+						width: auto;
+						height: 50px;
+						line-height: 50px;
+						padding-left: 40px;
+						margin-right: 15px;
+						display: inline-block;
+						background: url(/images/icon-price.png) left center no-repeat;
+						background-size: 40px;
+					}
+				}
+			}
+
+			.owner {
+				top: 0px;
+				right: 0px;
+				width: 150px;
+				height: 100%;
+				padding: 10px;
+				position: absolute;
+				/*background: $blue-text;*/
+				border-left: 1px solid $white-dark;
+				@include box-sizing();
+
+				h5 {
+					/*color: $white;*/
+					width: 100%;
+					height: 30px;
+					display: block;
+					text-align: center;
+					text-transform: capitalize;
+				}
+
+				span {
+					/*color: $white;*/
+					width: 100%;
+					line-height: 15px;
+					font-size: 12px;
+					display: block;
+					text-align: center;
+					text-decoration: underline;
+				}
+
+				.rate {
+					width: 125px;
+					height: 30px;
+					display: block;
+					margin: 0 auto;
+					overflow: hidden;
+					position: relative;
+
+					span {
+						float: left;
+						width: 25px;
+						height: 25px;
+						position: relative;
+						background: url(/images/icon-rate-1.png) center center no-repeat;
+						background-size: 40px;
+
+						&.active {
+							background-image: url(/images/icon-rate-2.png);
+							/*background-size: 40px;*/
+						}
 					}
 				}
 			}

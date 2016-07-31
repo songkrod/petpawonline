@@ -3,6 +3,6 @@ angular.module('core').config([
 	'$urlRouterProvider',
 	function ($locationProvider, $urlRouterProvider) {
 		$locationProvider.hashPrefix('!');
-		$urlRouterProvider.otherwise('/');
+		// $urlRouterProvider.otherwise('/');
 	}
 ])

@@ -1,0 +1,32 @@
+#overviews
+	.wrap
+		.right
+			ul
+				li.item
+					h3 250
+					a(href='#follower') point
+				li.item
+					h3 3
+					a(href='#following') cart
+				li.item
+					h3 1,000
+					a(href='#friends') payment
+			.bottom
+				p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo แอดมิชชั่น ยิมทิป ธุรกรรมอุปสงค์แชมพู แชมปิยองธุหร่ำทิป โพลารอยด์ตุ๊กวาฟเฟิล เพียบแปร้เซลส์ ปิยมิตรคาร์โก้พุทธศตวรรษโชว์รูม
+		.left
+			.profile-image
+				div(data-ng-include="'modules/user/views/profile.client.view.jade'")
+				img(src='/images/profile-bg.png')
+			h4 Petpaw Online
+		.setting: a(data-ui-sref='user.setting', title='Settings'): img(src='/images/icon-setting.png')
+#content
+	.contents
+		.wrap(data-ui-view='content')
+	.tabs(data-stick-to='{"item":"#header"}', data-stick-bar)
+		.wrap
+			ul
+				li.item: a(data-ui-sref='shop.feeds', title='product'): img(src='/images/icon-product.png')
+				li.item: a(data-ui-sref='shop.sale', title='product on sale'): img(src='/images/icon-special-price.png')
+				li.item: a(data-ui-sref='shop.recommend', title='recommend'): img(src='/images/icon-recommended.png')
+				li.item: a(data-ui-sref='shop.gift', title='gift'): img(src='/images/icon-gift.png')
+				li.item: a(href='#search', title='search'): img(src='/images/icon-search.png')

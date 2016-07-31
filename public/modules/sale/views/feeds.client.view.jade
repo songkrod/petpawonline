@@ -1,0 +1,18 @@
+ul.sale-feeds
+	li(data-ng-repeat="item in items")
+		a(href='#show-detail')
+			.pet-image(style='background-image:url("/images/sale/{{item.image}}")')
+			.detail
+				.w
+					h4 {{item.title}}
+					.price-box
+						span.id {{item.id}}
+						span.date {{item.date}}
+						span.time {{item.time}}
+						span.province province
+						h4 {{item.price | number:0}} THB
+			.owner
+				h5 {{item.owner.name}}
+				.rate
+					span(data-ng-repeat="i in getNumber(maxRate)", class="{{i < item.owner.rate ? 'active' : ''}}")
+				//- span (seller)

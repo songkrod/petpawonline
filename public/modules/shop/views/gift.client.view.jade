@@ -1,0 +1,7 @@
+.list.grid
+	ul(data-grid-layout)
+		li.grid-item(data-ng-repeat="gift in gifts")
+			.gift
+				.image
+					img(src='/images/gift/{{gift.image}}')
+				h4 Point : {{gift.point}}

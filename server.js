@@ -1,6 +1,6 @@
 process.env.NODE_ENV = process.env.NODE_ENV || "development";
 
-var db = require('./config/db');
+var db = require('./db');
 var express = require('./config/express');
 var passport = require('./config/passport');
 

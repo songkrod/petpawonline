@@ -8,7 +8,8 @@ angular.module('core').directive('gridLayout', function () {
 			$(me).masonry({
 				columnWidth: '.grid-item',
 				itemSelector: '.grid-item',
-				percentPosition: true
+				percentPosition: true,
+
 			}).imagesLoaded(function() {
 				$(me).masonry('layout');
 			});

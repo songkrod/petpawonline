@@ -1,5 +1,4 @@
 var config = require('./config');
-var db = require('./db');
 var express = require('express');
 var session = require('express-session');
 var passport = require('passport');

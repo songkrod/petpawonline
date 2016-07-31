@@ -3,8 +3,9 @@ angular.module('core').directive('dot', function () {
 		restrict: 'A',
 		link: function (scope, elem) {
 			elem.dotdotdot({
-				ellipsis: '.....',
+				ellipsis: '...',
 				watch: true,
+				// height: 70,
 				wrap: 'letter'
 			});
 		}

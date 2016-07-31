@@ -25,6 +25,14 @@
 	-webkit-box-shadow: #{$color} #{$x} #{$y} #{$blur} #{$inset};
 }
 
+@mixin transform($action) {
+	transform: $action;
+	-o-transform: $action;
+	-ms-transform: $action;
+	-moz-transform: $action;
+	-webkit-transform: $action;
+}
+
 @mixin user-select($type: 'none') {
 	user-select: #{$type};
 	-o-user-select:  #{$type};

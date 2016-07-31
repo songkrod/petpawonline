@@ -1,0 +1,12 @@
+angular.module('user').controller('UserFollowerController', [
+	'$scope',
+	function ($scope) {
+		$scope.title = 'Follower';
+		$scope.image = '/images/profile.jpg';
+		$scope.friends = [
+			{"name":"Hector Pall", "image":"1.jpg", "status":"วีไอพี สี่แยกเอ็นเตอร์เทน บัสไฮเปอร์ ธุรกรรมฟลุทอะ ล็อบบี้เหมยสามแยก"},
+			{"name":"Euyn Toward", "image":"2.jpg", "status":"ไทยแลนด์อิมพีเรียลอุปัทวเหตุ"},
+			{"name":"Lyonell Smith", "image":"3.jpg", "status":"โอเปร่า คอลัมน์ พูลเดชานุภาพแจ๊ส แอปเปิ้ล"}
+		];
+	}
+]);

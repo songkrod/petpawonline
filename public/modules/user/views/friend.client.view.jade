@@ -1,0 +1,8 @@
+h2 {{title}}
+.friend.grid
+	ul
+		li.grid-item(data-ng-repeat="friend in friends")
+			.image(style="background-image:url('/images/users/{{friend.image}}')")
+			.description
+				h6 {{friend.name}}
+				p {{friend.status}}

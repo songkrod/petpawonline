@@ -4,19 +4,20 @@ angular.module('core').directive('stickBar', function () {
 		scope: true,
 		link: function (scope, elem) {
 			var me = elem;
+			var options = JSON.parse($(me).attr('data-stick-to'));
+			var gaps = ( options.gaps ? parseInt( options.gaps ) : 0 );
+			var posTop = parseInt( $(options.item).outerHeight() ) + gaps;
 			
 			function sticky(me) {
 				var storeTop = $(me).attr('data-store-top');
-
 				if ( storeTop !== undefined ) {
-					if ( parseInt( $(document).scrollTop() ) + parseInt( $("#header").outerHeight() ) > $(me).attr('data-store-top') ) {
+					if ( parseInt( $(document).scrollTop() ) + posTop > storeTop ) {
 						if ( !$(me).hasClass('sticky') ) {
 							$(me).addClass('sticky');
 						}
 
 						$(me).css({
-							'top' : $("#header").outerHeight() + 'px',
-							'left' : '0px',
+							'top' : posTop + 'px',
 							'position' : 'fixed'
 						});
 					}
@@ -35,7 +36,7 @@ angular.module('core').directive('stickBar', function () {
 			});
 
 			window.onresize = function(event) {
-				$(me).attr('data-store-top', $("#content").offset().top);
+				$(me).attr('data-store-top', $(options.item).offset().top + $(options.item).outerHeight() );
 				sticky(me);
 			};
 		}

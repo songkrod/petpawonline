@@ -62,8 +62,8 @@ input[type='password']:focus,
 input[type='email']:focus, 
 textarea:focus
 {
-	border-color: salmon;
-	@include box-shadow(salmon);
+	border-color: $btn-bg;
+	@include box-shadow($btn-bg);
 }
 
 button[type='button'],
@@ -72,14 +72,17 @@ input[type='button'],
 input[type='submit'],
 .highlight-btn
 {
-	color: #fff;
+	color: $btn-text;
 	min-width: 150px;
-	height: 35px;
+	height: 50px;
 	line-height: 35px;
 	padding: 0 10px;
 	display: inline-block;
-	border: 1px solid #ffcd35;
-	background: #ffcd35;
+	border: 1px solid $btn-bg;
+	background: $btn-bg;
+	font-size: 20px;
+	font-family: $highlight-font;
+	text-transform: capitalize;
 	
 	@include animate();
 	@include box-sizing();
@@ -102,8 +105,7 @@ input[type='button'].red-btn, button[type='button'].red-btn
 
 input[type='button']:hover, button[type='button']:hover, input[type='submit']:hover, .highlight-btn:hover, button[type='submit']:hover, .gray-btn:hover
 {
-	color: #000;
-	@include box-shadow(rgba(0, 0, 0, 0.5));
+	background: $btn-bg-hover;
 }
 
 select
@@ -121,9 +123,8 @@ select
 
 select:focus
 {
-	border-color: salmon;
-	
-	@include box-shadow();
+	border-color: $btn-bg;
+	@include box-shadow($btn-bg);
 }
 
 .select-arrow

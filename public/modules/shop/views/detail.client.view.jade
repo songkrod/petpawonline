@@ -1,0 +1,30 @@
+.product-detail
+	.left
+		.image
+			img(src='/images/shop/{{product.category}}/{{product.image}}')
+		.image-grid
+			img(src='/images/shop/{{product.category}}/{{product.image}}')
+	.right
+		h3 {{product.name}}
+		.info-pack
+			h5 Pet
+			span {{product.category}}
+		.info-pack
+			h5 Breed Size
+			span {{product.size}}
+		.info-pack
+			h5 Life Stage
+			span {{product.life}}
+		.info-pack
+			h5 Category
+			span {{product.product}}
+		.info-pack
+			h5 Brand
+			span {{product.brand}}
+		.info-pack
+			h5 Price
+			span {{product.price | number:0}} THB
+		.description
+			p(data-dot) Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo แอดมิชชั่น ยิมทิป ธุรกรรมอุปสงค์แชมพู แชมปิยองธุหร่ำทิป โพลารอยด์ตุ๊กวาฟเฟิล เพียบแปร้เซลส์ ปิยมิตรคาร์โก้พุทธศตวรรษโชว์รูม
+		.console
+			button(type='button', style='background-image: url("/images/icon-add-to-cart.png");') Add to Cart

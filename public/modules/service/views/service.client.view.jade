@@ -1,0 +1,31 @@
+#overviews
+	.wrap
+		.right
+			ul
+				li.item
+					h3 13
+					a(href='#buy') buy
+				li.item
+					h3 9
+					a(href='#sell') sell
+				li.item
+					h3 5
+					a(href='#bid') bid
+			.bottom
+				p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo แอดมิชชั่น ยิมทิป ธุรกรรมอุปสงค์แชมพู แชมปิยองธุหร่ำทิป โพลารอยด์ตุ๊กวาฟเฟิล เพียบแปร้เซลส์ ปิยมิตรคาร์โก้พุทธศตวรรษโชว์รูม
+		.left
+			.profile-image
+				div(data-ng-include="'modules/user/views/profile.client.view.jade'")
+				img(src='/images/profile-bg.png')
+			h4 Petpaw Online
+#content
+	.contents
+		.wrap(data-ui-view='content')
+	.tabs(data-stick-to='{"item":"#header"}', data-stick-bar)
+		.wrap
+			ul
+				li.item.active: a(href='#blank'): img(src='/images/icon-petshop.png')
+				li.item: a(href='#blank'): img(src='/images/icon-hotel.png')
+				li.item: a(href='#recommended'): img(src='/images/icon-grooming.png')
+				li.item: a(href='#special-price'): img(src='/images/icon-cafe.png')
+				li.item: a(href='#search'): img(src='/images/icon-hospital.png')
