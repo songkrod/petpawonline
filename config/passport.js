@@ -1,5 +1,5 @@
 var passport = require('passport');
-var db = require('./db');
+// var db = require('./db');
 
 module.exports = function () {
 	// var User = db.user;
