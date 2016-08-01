@@ -9,7 +9,9 @@ var passport = passport();
 
 //db.sequelize.sync().then(function() {
 //	console.log('Database connected.');
-	app.listen( 4000, function() {
-		console.log('Server running at port 4000 on ' + process.env.NODE_ENV);
+	
+	var tPort = process.env.PORT || 5000;
+	app.listen( tPort, function() {
+		console.log('Server running at port ' + tPort + ' on ' + process.env.NODE_ENV);
 	});
 //});
