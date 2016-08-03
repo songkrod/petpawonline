@@ -33,7 +33,9 @@ angular.module('shop').controller('ShopFeedsController', [
 			return 0.5 - Math.random();
 		}
 
-		$scope.maxRate = 5;
+		function getRate() {
+			return Math.round(Math.random() * 5);
+		}
 
 		$scope.products = [
 			{
@@ -47,7 +49,7 @@ angular.module('shop').controller('ShopFeedsController', [
 				"life": "All",
 				"brand": "royal canin",
 				"price": "1230",
-				"rate": Math.round(Math.random() * 5)
+				"rate": getRate()
 			},
 			{
 				"id": "2",
@@ -60,7 +62,7 @@ angular.module('shop').controller('ShopFeedsController', [
 				"life": "All",
 				"brand": "royal canin",
 				"price": "1890",
-				"rate": Math.round(Math.random() * 5)
+				"rate": getRate()
 			},
 			{
 				"id": "3",
@@ -73,7 +75,7 @@ angular.module('shop').controller('ShopFeedsController', [
 				"life": "All",
 				"brand": "royal canin",
 				"price": "1890",
-				"rate": Math.round(Math.random() * 5)
+				"rate": getRate()
 			},
 			{
 				"id": "4",
@@ -86,7 +88,7 @@ angular.module('shop').controller('ShopFeedsController', [
 				"life": "All",
 				"brand": "",
 				"price": "139",
-				"rate": Math.round(Math.random() * 5)
+				"rate": getRate()
 			},
 			{
 				"id": "5",
@@ -99,7 +101,7 @@ angular.module('shop').controller('ShopFeedsController', [
 				"life": "All",
 				"brand": "",
 				"price": "129",
-				"rate": Math.round(Math.random() * 5)
+				"rate": getRate()
 			},
 			{
 				"id": "6",
@@ -112,7 +114,7 @@ angular.module('shop').controller('ShopFeedsController', [
 				"life": "All",
 				"brand": "",
 				"price": "329",
-				"rate": Math.round(Math.random() * 5)
+				"rate": getRate()
 			},
 			{
 				"id": "7",
@@ -125,7 +127,7 @@ angular.module('shop').controller('ShopFeedsController', [
 				"life": "All",
 				"brand": "",
 				"price": "389",
-				"rate": Math.round(Math.random() * 5)
+				"rate": getRate()
 			},
 			{
 				"id": "8",
@@ -138,7 +140,7 @@ angular.module('shop').controller('ShopFeedsController', [
 				"life": "All",
 				"brand": "",
 				"price": "335",
-				"rate": Math.round(Math.random() * 5)
+				"rate": getRate()
 			},
 			{
 				"id": "9",
@@ -151,7 +153,7 @@ angular.module('shop').controller('ShopFeedsController', [
 				"life": "All",
 				"brand": "",
 				"price": "99",
-				"rate": Math.round(Math.random() * 5)
+				"rate": getRate()
 			},
 			{
 				"id": "10",
@@ -164,7 +166,7 @@ angular.module('shop').controller('ShopFeedsController', [
 				"life": "All",
 				"brand": "",
 				"price": "449",
-				"rate": Math.round(Math.random() * 5)
+				"rate": getRate()
 			},
 			{
 				"id": "11",
@@ -177,7 +179,7 @@ angular.module('shop').controller('ShopFeedsController', [
 				"life": "All",
 				"brand": "",
 				"price": "1039",
-				"rate": Math.round(Math.random() * 5)
+				"rate": getRate()
 			},
 			{
 				"id": "12",
@@ -190,7 +192,7 @@ angular.module('shop').controller('ShopFeedsController', [
 				"life": "All",
 				"brand": "",
 				"price": "490",
-				"rate": Math.round(Math.random() * 5)
+				"rate": getRate()
 			},
 			{
 				"id": "13",
@@ -203,7 +205,7 @@ angular.module('shop').controller('ShopFeedsController', [
 				"life": "All",
 				"brand": "",
 				"price": "719",
-				"rate": Math.round(Math.random() * 5)
+				"rate": getRate()
 			},
 			{
 				"id": "14",
@@ -216,7 +218,7 @@ angular.module('shop').controller('ShopFeedsController', [
 				"life": "All",
 				"brand": "",
 				"price": "429",
-				"rate": Math.round(Math.random() * 5)
+				"rate": getRate()
 			},
 			{
 				"id": "15",
@@ -229,7 +231,7 @@ angular.module('shop').controller('ShopFeedsController', [
 				"life": "All",
 				"brand": "Ifex",
 				"price": "1690",
-				"rate": Math.round(Math.random() * 5)
+				"rate": getRate()
 			},
 			{
 				"id": "16",
@@ -242,7 +244,7 @@ angular.module('shop').controller('ShopFeedsController', [
 				"life": "All",
 				"brand": "Friskies",
 				"price": "529",
-				"rate": Math.round(Math.random() * 5)
+				"rate": getRate()
 			},
 			{
 				"id": "17",
@@ -255,7 +257,7 @@ angular.module('shop').controller('ShopFeedsController', [
 				"life": "All",
 				"brand": "Cat'n Joy",
 				"price": "443",
-				"rate": Math.round(Math.random() * 5)
+				"rate": getRate()
 			},
 			{
 				"id": "18",
@@ -268,7 +270,7 @@ angular.module('shop').controller('ShopFeedsController', [
 				"life": "All",
 				"brand": "Whiskas",
 				"price": "259",
-				"rate": Math.round(Math.random() * 5)
+				"rate": getRate()
 			},
 			{
 				"id": "19",
@@ -281,7 +283,7 @@ angular.module('shop').controller('ShopFeedsController', [
 				"life": "All",
 				"brand": "",
 				"price": "149",
-				"rate": Math.round(Math.random() * 5)
+				"rate": getRate()
 			},
 			{
 				"id": "20",
@@ -294,7 +296,7 @@ angular.module('shop').controller('ShopFeedsController', [
 				"life": "All",
 				"brand": "",
 				"price": "439",
-				"rate": Math.round(Math.random() * 5)
+				"rate": getRate()
 			},
 			{
 				"id": "21",
@@ -307,7 +309,7 @@ angular.module('shop').controller('ShopFeedsController', [
 				"life": "All",
 				"brand": "",
 				"price": "829",
-				"rate": Math.round(Math.random() * 5)
+				"rate": getRate()
 			},
 			{
 				"id": "22",
@@ -320,7 +322,7 @@ angular.module('shop').controller('ShopFeedsController', [
 				"life": "All",
 				"brand": "",
 				"price": "429",
-				"rate": Math.round(Math.random() * 5)
+				"rate": getRate()
 			},
 			{
 				"id": "23",
@@ -333,7 +335,7 @@ angular.module('shop').controller('ShopFeedsController', [
 				"life": "All",
 				"brand": "",
 				"price": "159",
-				"rate": Math.round(Math.random() * 5)
+				"rate": getRate()
 			},
 			{
 				"id": "24",
@@ -346,7 +348,7 @@ angular.module('shop').controller('ShopFeedsController', [
 				"life": "All",
 				"brand": "",
 				"price": "319",
-				"rate": Math.round(Math.random() * 5)
+				"rate": getRate()
 			},
 			{
 				"id": "25",
@@ -359,7 +361,7 @@ angular.module('shop').controller('ShopFeedsController', [
 				"life": "All",
 				"brand": "",
 				"price": "3890",
-				"rate": Math.round(Math.random() * 5)
+				"rate": getRate()
 			},
 			{
 				"id": "26",
@@ -372,7 +374,7 @@ angular.module('shop').controller('ShopFeedsController', [
 				"life": "All",
 				"brand": "",
 				"price": "1139",
-				"rate": Math.round(Math.random() * 5)
+				"rate": getRate()
 			},
 			{
 				"id": "27",
@@ -385,7 +387,7 @@ angular.module('shop').controller('ShopFeedsController', [
 				"life": "All",
 				"brand": "",
 				"price": "479",
-				"rate": Math.round(Math.random() * 5)
+				"rate": getRate()
 			},
 			{
 				"id": "28",
@@ -398,7 +400,7 @@ angular.module('shop').controller('ShopFeedsController', [
 				"life": "All",
 				"brand": "",
 				"price": "159",
-				"rate": Math.round(Math.random() * 5)
+				"rate": getRate()
 			},
 			{
 				"id": "29",
@@ -411,7 +413,7 @@ angular.module('shop').controller('ShopFeedsController', [
 				"life": "All",
 				"brand": "",
 				"price": "119",
-				"rate": Math.round(Math.random() * 5)
+				"rate": getRate()
 			},
 			{
 				"id": "30",
@@ -424,18 +426,8 @@ angular.module('shop').controller('ShopFeedsController', [
 				"life": "All",
 				"brand": "",
 				"price": "269",
-				"rate": Math.round(Math.random() * 5)
+				"rate": getRate()
 			}
 		];
-
-		$scope.getNumber = function(num) {
-			var arr = new Array();
-
-			for (var i = 0; i < num; i++) {
-				arr.push(i);
-			}
-
-			return arr;
-		}
 	}
 ]);

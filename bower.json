@@ -23,6 +23,7 @@
     "imagesloaded": "~4.1.0",
     "jQuery.dotdotdot": "~1.8.1",
     "cropperjs": "~0.7.2",
-    "ng-img-crop": "ngImgCrop#^0.3.2"
+    "ng-img-crop": "ngImgCrop#^0.3.2",
+    "ngmap": "^1.17.3"
   }
 }

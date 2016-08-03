@@ -7,7 +7,11 @@
 						.image
 							img(src='/images/shop/{{product.category}}/{{product.image}}')
 						.rate
-							span(data-ng-repeat="i in getNumber(maxRate)", class="{{i < product.rate ? 'active' : ''}}")
+							span(class="{{0 < product.rate ? 'active' : ''}}")
+							span(class="{{1 < product.rate ? 'active' : ''}}")
+							span(class="{{2 < product.rate ? 'active' : ''}}")
+							span(class="{{3 < product.rate ? 'active' : ''}}")
+							span(class="{{4 < product.rate ? 'active' : ''}}")
 					.right
 						h3 {{product.name}}
 						.info-pack

@@ -24,8 +24,8 @@
 	.tabs(data-stick-to='{"item":"#header"}', data-stick-bar)
 		.wrap
 			ul
-				li.item.active: a(href='#blank'): img(src='/images/icon-petshop.png')
-				li.item: a(href='#blank'): img(src='/images/icon-hotel.png')
-				li.item: a(href='#recommended'): img(src='/images/icon-grooming.png')
-				li.item: a(href='#special-price'): img(src='/images/icon-cafe.png')
-				li.item: a(href='#search'): img(src='/images/icon-hospital.png')
+				li.item.active: a(data-ui-sref='service.shop', title='Pet Shop'): img(src='/images/icon-petshop.png')
+				li.item: a(data-ui-sref='service.hotel', title='Hotel'): img(src='/images/icon-hotel.png')
+				li.item: a(data-ui-sref='service.grooming', title='Grooming'): img(src='/images/icon-grooming.png')
+				li.item: a(data-ui-sref='service.cafe', title='Cafe'): img(src='/images/icon-cafe.png')
+				li.item: a(data-ui-sref='service.hospital', title='Hospital'): img(src='/images/icon-hospital.png')

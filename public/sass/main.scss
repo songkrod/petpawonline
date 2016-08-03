@@ -742,6 +742,10 @@ label {
 								background: $white;
 								border-top: 1px solid $white-dark;
 							}
+
+							.console {
+								background: $white;
+							}
 						}
 					}
 				}
@@ -892,6 +896,7 @@ label {
 					.info-pack {
 						width: 100%;
 						font-size: 0;
+						padding: 7px 0;
 						position: relative;
 
 						h5 {
@@ -1541,6 +1546,48 @@ body[data-page='service'] {
 						}
 					}
 				}
+			}
+		}
+	}
+}
+
+.recommend {
+	width: 100%;
+	max-width: 1000px;
+	margin: 0 auto;
+
+	.layout {
+		width: 100%;
+		overflow: hidden;
+		position: relative;
+
+		.image {
+			float: left;
+			width: 100%;
+			padding: 10px;
+			position: relative;
+			@include box-sizing();
+
+			img {
+				width: 100%;
+			}
+		}
+
+		&.layout-1 {
+			.image {
+				width: 100%;
+			}
+		}
+
+		&.layout-2 {
+			.image {
+				width: 50%;
+			}
+		}
+
+		&.layout-3 {
+			.image {
+				width: 33.33%;
 			}
 		}
 	}
