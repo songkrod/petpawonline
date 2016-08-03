@@ -1,37 +1,1023 @@
 .list.grid
 	ul(data-grid-layout)
-		li.grid-item(data-ng-repeat="product in products | orderBy:random")
+		//- li.grid-item
+		//- 	.product
+		//- 		a(data-ui-sref='shop.detail({id:"{{pad("00000", products[0]["id"], true)}}", name:"{{products[0]["segment"]}}"})')
+		//- 			.left
+		//- 				.image
+		//- 					img(src='/images/shop/{{products[0]["category"]}}/{{products[0]["image"]}}')
+		//- 				.rate
+		//- 					span(class="{{0 < products[0]['rate'] ? 'active' : ''}}")
+		//- 					span(class="{{1 < products[0]['rate'] ? 'active' : ''}}")
+		//- 					span(class="{{2 < products[0]['rate'] ? 'active' : ''}}")
+		//- 					span(class="{{3 < products[0]['rate'] ? 'active' : ''}}")
+		//- 					span(class="{{4 < products[0]['rate'] ? 'active' : ''}}")
+		//- 			.right
+		//- 				h3 {{products[0]['name']}}
+		//- 				.info-pack
+		//- 					h5 Pet
+		//- 					span {{products[0]['category']}}
+		//- 				.info-pack
+		//- 					h5 Breed Size
+		//- 					span {{products[0]['size']}}
+		//- 				.info-pack
+		//- 					h5 Life Stage
+		//- 					span {{products[0]['life']}}
+		//- 				.info-pack
+		//- 					h5 Category
+		//- 					span {{products[0]['product']}}
+		//- 				.info-pack(data-ng-if="products[0]['brand'] != ''")
+		//- 					h5 Brand
+		//- 					span {{products[0]['brand']}}
+		//- 				.info-pack.force-show
+		//- 					h5 Price
+		//- 					span {{products[0]['price'] | number:0}} THB
+		//- 				.console
+		//- 					button(type='button', style='background-image: url("/images/icon-add-to-cart.png");') Add to Cart
+		//- li.grid-item
+		//- 	.product
+		//- 		a(data-ui-sref='shop.detail({id:"{{pad("00000", products[1]["id"], true)}}", name:"{{products[1]["segment"]}}"})')
+		//- 			.left
+		//- 				.image
+		//- 					img(src='/images/shop/{{products[1]["category"]}}/{{products[1]["image"]}}')
+		//- 				.rate
+		//- 					span(class="{{0 < products[1]['rate'] ? 'active' : ''}}")
+		//- 					span(class="{{1 < products[1]['rate'] ? 'active' : ''}}")
+		//- 					span(class="{{2 < products[1]['rate'] ? 'active' : ''}}")
+		//- 					span(class="{{3 < products[1]['rate'] ? 'active' : ''}}")
+		//- 					span(class="{{4 < products[1]['rate'] ? 'active' : ''}}")
+		//- 			.right
+		//- 				h3 {{products[1]['name']}}
+		//- 				.info-pack
+		//- 					h5 Pet
+		//- 					span {{products[1]['category']}}
+		//- 				.info-pack
+		//- 					h5 Breed Size
+		//- 					span {{products[1]['size']}}
+		//- 				.info-pack
+		//- 					h5 Life Stage
+		//- 					span {{products[1]['life']}}
+		//- 				.info-pack
+		//- 					h5 Category
+		//- 					span {{products[1]['product']}}
+		//- 				.info-pack(data-ng-if="products[1]['brand'] != ''")
+		//- 					h5 Brand
+		//- 					span {{products[1]['brand']}}
+		//- 				.info-pack.force-show
+		//- 					h5 Price
+		//- 					span {{products[1]['price'] | number:0}} THB
+		//- 				.console
+		//- 					button(type='button', style='background-image: url("/images/icon-add-to-cart.png");') Add to Cart
+		//- li.grid-item
+		//- 	.product
+		//- 		a(data-ui-sref='shop.detail({id:"{{pad("00000", products[2]["id"], true)}}", name:"{{products[2]["segment"]}}"})')
+		//- 			.left
+		//- 				.image
+		//- 					img(src='/images/shop/{{products[2]["category"]}}/{{products[2]["image"]}}')
+		//- 				.rate
+		//- 					span(class="{{0 < products[2]['rate'] ? 'active' : ''}}")
+		//- 					span(class="{{1 < products[2]['rate'] ? 'active' : ''}}")
+		//- 					span(class="{{2 < products[2]['rate'] ? 'active' : ''}}")
+		//- 					span(class="{{3 < products[2]['rate'] ? 'active' : ''}}")
+		//- 					span(class="{{4 < products[2]['rate'] ? 'active' : ''}}")
+		//- 			.right
+		//- 				h3 {{products[2]['name']}}
+		//- 				.info-pack
+		//- 					h5 Pet
+		//- 					span {{products[2]['category']}}
+		//- 				.info-pack
+		//- 					h5 Breed Size
+		//- 					span {{products[2]['size']}}
+		//- 				.info-pack
+		//- 					h5 Life Stage
+		//- 					span {{products[2]['life']}}
+		//- 				.info-pack
+		//- 					h5 Category
+		//- 					span {{products[2]['product']}}
+		//- 				.info-pack(data-ng-if="products[2]['brand'] != ''")
+		//- 					h5 Brand
+		//- 					span {{products[2]['brand']}}
+		//- 				.info-pack.force-show
+		//- 					h5 Price
+		//- 					span {{products[2]['price'] | number:0}} THB
+		//- 				.console
+		//- 					button(type='button', style='background-image: url("/images/icon-add-to-cart.png");') Add to Cart
+		//- li.grid-item
+		//- 	.product
+		//- 		a(data-ui-sref='shop.detail({id:"{{pad("00000", products[3]["id"], true)}}", name:"{{products[3]["segment"]}}"})')
+		//- 			.left
+		//- 				.image
+		//- 					img(src='/images/shop/{{products[3]["category"]}}/{{products[3]["image"]}}')
+		//- 				.rate
+		//- 					span(class="{{0 < products[3]['rate'] ? 'active' : ''}}")
+		//- 					span(class="{{1 < products[3]['rate'] ? 'active' : ''}}")
+		//- 					span(class="{{2 < products[3]['rate'] ? 'active' : ''}}")
+		//- 					span(class="{{3 < products[3]['rate'] ? 'active' : ''}}")
+		//- 					span(class="{{4 < products[3]['rate'] ? 'active' : ''}}")
+		//- 			.right
+		//- 				h3 {{products[3]['name']}}
+		//- 				.info-pack
+		//- 					h5 Pet
+		//- 					span {{products[3]['category']}}
+		//- 				.info-pack
+		//- 					h5 Breed Size
+		//- 					span {{products[3]['size']}}
+		//- 				.info-pack
+		//- 					h5 Life Stage
+		//- 					span {{products[3]['life']}}
+		//- 				.info-pack
+		//- 					h5 Category
+		//- 					span {{products[3]['product']}}
+		//- 				.info-pack(data-ng-if="products[3]['brand'] != ''")
+		//- 					h5 Brand
+		//- 					span {{products[3]['brand']}}
+		//- 				.info-pack.force-show
+		//- 					h5 Price
+		//- 					span {{products[3]['price'] | number:0}} THB
+		//- 				.console
+		//- 					button(type='button', style='background-image: url("/images/icon-add-to-cart.png");') Add to Cart
+		//- li.grid-item
+		//- 	.product
+		//- 		a(data-ui-sref='shop.detail({id:"{{pad("00000", products[4]["id"], true)}}", name:"{{products[4]["segment"]}}"})')
+		//- 			.left
+		//- 				.image
+		//- 					img(src='/images/shop/{{products[4]["category"]}}/{{products[4]["image"]}}')
+		//- 				.rate
+		//- 					span(class="{{0 < products[4]['rate'] ? 'active' : ''}}")
+		//- 					span(class="{{1 < products[4]['rate'] ? 'active' : ''}}")
+		//- 					span(class="{{2 < products[4]['rate'] ? 'active' : ''}}")
+		//- 					span(class="{{3 < products[4]['rate'] ? 'active' : ''}}")
+		//- 					span(class="{{4 < products[4]['rate'] ? 'active' : ''}}")
+		//- 			.right
+		//- 				h3 {{products[4]['name']}}
+		//- 				.info-pack
+		//- 					h5 Pet
+		//- 					span {{products[4]['category']}}
+		//- 				.info-pack
+		//- 					h5 Breed Size
+		//- 					span {{products[4]['size']}}
+		//- 				.info-pack
+		//- 					h5 Life Stage
+		//- 					span {{products[4]['life']}}
+		//- 				.info-pack
+		//- 					h5 Category
+		//- 					span {{products[4]['product']}}
+		//- 				.info-pack(data-ng-if="products[4]['brand'] != ''")
+		//- 					h5 Brand
+		//- 					span {{products[4]['brand']}}
+		//- 				.info-pack.force-show
+		//- 					h5 Price
+		//- 					span {{products[4]['price'] | number:0}} THB
+		//- 				.console
+		//- 					button(type='button', style='background-image: url("/images/icon-add-to-cart.png");') Add to Cart
+		//- li.grid-item
+		//- 	.product
+		//- 		a(data-ui-sref='shop.detail({id:"{{pad("00000", products[5]["id"], true)}}", name:"{{products[5]["segment"]}}"})')
+		//- 			.left
+		//- 				.image
+		//- 					img(src='/images/shop/{{products[5]["category"]}}/{{products[5]["image"]}}')
+		//- 				.rate
+		//- 					span(class="{{0 < products[5]['rate'] ? 'active' : ''}}")
+		//- 					span(class="{{1 < products[5]['rate'] ? 'active' : ''}}")
+		//- 					span(class="{{2 < products[5]['rate'] ? 'active' : ''}}")
+		//- 					span(class="{{3 < products[5]['rate'] ? 'active' : ''}}")
+		//- 					span(class="{{4 < products[5]['rate'] ? 'active' : ''}}")
+		//- 			.right
+		//- 				h3 {{products[5]['name']}}
+		//- 				.info-pack
+		//- 					h5 Pet
+		//- 					span {{products[5]['category']}}
+		//- 				.info-pack
+		//- 					h5 Breed Size
+		//- 					span {{products[5]['size']}}
+		//- 				.info-pack
+		//- 					h5 Life Stage
+		//- 					span {{products[5]['life']}}
+		//- 				.info-pack
+		//- 					h5 Category
+		//- 					span {{products[5]['product']}}
+		//- 				.info-pack(data-ng-if="products[5]['brand'] != ''")
+		//- 					h5 Brand
+		//- 					span {{products[5]['brand']}}
+		//- 				.info-pack.force-show
+		//- 					h5 Price
+		//- 					span {{products[5]['price'] | number:0}} THB
+		//- 				.console
+		//- 					button(type='button', style='background-image: url("/images/icon-add-to-cart.png");') Add to Cart
+		//- li.grid-item
+		//- 	.product
+		//- 		a(data-ui-sref='shop.detail({id:"{{pad("00000", products[6]["id"], true)}}", name:"{{products[6]["segment"]}}"})')
+		//- 			.left
+		//- 				.image
+		//- 					img(src='/images/shop/{{products[6]["category"]}}/{{products[6]["image"]}}')
+		//- 				.rate
+		//- 					span(class="{{0 < products[6]['rate'] ? 'active' : ''}}")
+		//- 					span(class="{{1 < products[6]['rate'] ? 'active' : ''}}")
+		//- 					span(class="{{2 < products[6]['rate'] ? 'active' : ''}}")
+		//- 					span(class="{{3 < products[6]['rate'] ? 'active' : ''}}")
+		//- 					span(class="{{4 < products[6]['rate'] ? 'active' : ''}}")
+		//- 			.right
+		//- 				h3 {{products[6]['name']}}
+		//- 				.info-pack
+		//- 					h5 Pet
+		//- 					span {{products[6]['category']}}
+		//- 				.info-pack
+		//- 					h5 Breed Size
+		//- 					span {{products[6]['size']}}
+		//- 				.info-pack
+		//- 					h5 Life Stage
+		//- 					span {{products[6]['life']}}
+		//- 				.info-pack
+		//- 					h5 Category
+		//- 					span {{products[6]['product']}}
+		//- 				.info-pack(data-ng-if="products[6]['brand'] != ''")
+		//- 					h5 Brand
+		//- 					span {{products[6]['brand']}}
+		//- 				.info-pack.force-show
+		//- 					h5 Price
+		//- 					span {{products[6]['price'] | number:0}} THB
+		//- 				.console
+		//- 					button(type='button', style='background-image: url("/images/icon-add-to-cart.png");') Add to Cart
+		//- li.grid-item
+		//- 	.product
+		//- 		a(data-ui-sref='shop.detail({id:"{{pad("00000", products[7]["id"], true)}}", name:"{{products[7]["segment"]}}"})')
+		//- 			.left
+		//- 				.image
+		//- 					img(src='/images/shop/{{products[7]["category"]}}/{{products[7]["image"]}}')
+		//- 				.rate
+		//- 					span(class="{{0 < products[7]['rate'] ? 'active' : ''}}")
+		//- 					span(class="{{1 < products[7]['rate'] ? 'active' : ''}}")
+		//- 					span(class="{{2 < products[7]['rate'] ? 'active' : ''}}")
+		//- 					span(class="{{3 < products[7]['rate'] ? 'active' : ''}}")
+		//- 					span(class="{{4 < products[7]['rate'] ? 'active' : ''}}")
+		//- 			.right
+		//- 				h3 {{products[7]['name']}}
+		//- 				.info-pack
+		//- 					h5 Pet
+		//- 					span {{products[7]['category']}}
+		//- 				.info-pack
+		//- 					h5 Breed Size
+		//- 					span {{products[7]['size']}}
+		//- 				.info-pack
+		//- 					h5 Life Stage
+		//- 					span {{products[7]['life']}}
+		//- 				.info-pack
+		//- 					h5 Category
+		//- 					span {{products[7]['product']}}
+		//- 				.info-pack(data-ng-if="products[7]['brand'] != ''")
+		//- 					h5 Brand
+		//- 					span {{products[7]['brand']}}
+		//- 				.info-pack.force-show
+		//- 					h5 Price
+		//- 					span {{products[7]['price'] | number:0}} THB
+		//- 				.console
+		//- 					button(type='button', style='background-image: url("/images/icon-add-to-cart.png");') Add to Cart
+		//- li.grid-item
+		//- 	.product
+		//- 		a(data-ui-sref='shop.detail({id:"{{pad("00000", products[8]["id"], true)}}", name:"{{products[8]["segment"]}}"})')
+		//- 			.left
+		//- 				.image
+		//- 					img(src='/images/shop/{{products[8]["category"]}}/{{products[8]["image"]}}')
+		//- 				.rate
+		//- 					span(class="{{0 < products[8]['rate'] ? 'active' : ''}}")
+		//- 					span(class="{{1 < products[8]['rate'] ? 'active' : ''}}")
+		//- 					span(class="{{2 < products[8]['rate'] ? 'active' : ''}}")
+		//- 					span(class="{{3 < products[8]['rate'] ? 'active' : ''}}")
+		//- 					span(class="{{4 < products[8]['rate'] ? 'active' : ''}}")
+		//- 			.right
+		//- 				h3 {{products[8]['name']}}
+		//- 				.info-pack
+		//- 					h5 Pet
+		//- 					span {{products[8]['category']}}
+		//- 				.info-pack
+		//- 					h5 Breed Size
+		//- 					span {{products[8]['size']}}
+		//- 				.info-pack
+		//- 					h5 Life Stage
+		//- 					span {{products[8]['life']}}
+		//- 				.info-pack
+		//- 					h5 Category
+		//- 					span {{products[8]['product']}}
+		//- 				.info-pack(data-ng-if="products[8]['brand'] != ''")
+		//- 					h5 Brand
+		//- 					span {{products[8]['brand']}}
+		//- 				.info-pack.force-show
+		//- 					h5 Price
+		//- 					span {{products[8]['price'] | number:0}} THB
+		//- 				.console
+		//- 					button(type='button', style='background-image: url("/images/icon-add-to-cart.png");') Add to Cart
+		//- li.grid-item
+		//- 	.product
+		//- 		a(data-ui-sref='shop.detail({id:"{{pad("00000", products[9]["id"], true)}}", name:"{{products[9]["segment"]}}"})')
+		//- 			.left
+		//- 				.image
+		//- 					img(src='/images/shop/{{products[9]["category"]}}/{{products[9]["image"]}}')
+		//- 				.rate
+		//- 					span(class="{{0 < products[9]['rate'] ? 'active' : ''}}")
+		//- 					span(class="{{1 < products[9]['rate'] ? 'active' : ''}}")
+		//- 					span(class="{{2 < products[9]['rate'] ? 'active' : ''}}")
+		//- 					span(class="{{3 < products[9]['rate'] ? 'active' : ''}}")
+		//- 					span(class="{{4 < products[9]['rate'] ? 'active' : ''}}")
+		//- 			.right
+		//- 				h3 {{products[9]['name']}}
+		//- 				.info-pack
+		//- 					h5 Pet
+		//- 					span {{products[9]['category']}}
+		//- 				.info-pack
+		//- 					h5 Breed Size
+		//- 					span {{products[9]['size']}}
+		//- 				.info-pack
+		//- 					h5 Life Stage
+		//- 					span {{products[9]['life']}}
+		//- 				.info-pack
+		//- 					h5 Category
+		//- 					span {{products[9]['product']}}
+		//- 				.info-pack(data-ng-if="products[9]['brand'] != ''")
+		//- 					h5 Brand
+		//- 					span {{products[9]['brand']}}
+		//- 				.info-pack.force-show
+		//- 					h5 Price
+		//- 					span {{products[9]['price'] | number:0}} THB
+		//- 				.console
+		//- 					button(type='button', style='background-image: url("/images/icon-add-to-cart.png");') Add to Cart
+		//- li.grid-item
+		//- 	.product
+		//- 		a(data-ui-sref='shop.detail({id:"{{pad("00000", products[10]["id"], true)}}", name:"{{products[10]["segment"]}}"})')
+		//- 			.left
+		//- 				.image
+		//- 					img(src='/images/shop/{{products[10]["category"]}}/{{products[10]["image"]}}')
+		//- 				.rate
+		//- 					span(class="{{0 < products[10]['rate'] ? 'active' : ''}}")
+		//- 					span(class="{{1 < products[10]['rate'] ? 'active' : ''}}")
+		//- 					span(class="{{2 < products[10]['rate'] ? 'active' : ''}}")
+		//- 					span(class="{{3 < products[10]['rate'] ? 'active' : ''}}")
+		//- 					span(class="{{4 < products[10]['rate'] ? 'active' : ''}}")
+		//- 			.right
+		//- 				h3 {{products[10]['name']}}
+		//- 				.info-pack
+		//- 					h5 Pet
+		//- 					span {{products[10]['category']}}
+		//- 				.info-pack
+		//- 					h5 Breed Size
+		//- 					span {{products[10]['size']}}
+		//- 				.info-pack
+		//- 					h5 Life Stage
+		//- 					span {{products[10]['life']}}
+		//- 				.info-pack
+		//- 					h5 Category
+		//- 					span {{products[10]['product']}}
+		//- 				.info-pack(data-ng-if="products[10]['brand'] != ''")
+		//- 					h5 Brand
+		//- 					span {{products[10]['brand']}}
+		//- 				.info-pack.force-show
+		//- 					h5 Price
+		//- 					span {{products[10]['price'] | number:0}} THB
+		//- 				.console
+		//- 					button(type='button', style='background-image: url("/images/icon-add-to-cart.png");') Add to Cart
+		//- li.grid-item
+		//- 	.product
+		//- 		a(data-ui-sref='shop.detail({id:"{{pad("00000", products[11]["id"], true)}}", name:"{{products[11]["segment"]}}"})')
+		//- 			.left
+		//- 				.image
+		//- 					img(src='/images/shop/{{products[11]["category"]}}/{{products[11]["image"]}}')
+		//- 				.rate
+		//- 					span(class="{{0 < products[11]['rate'] ? 'active' : ''}}")
+		//- 					span(class="{{1 < products[11]['rate'] ? 'active' : ''}}")
+		//- 					span(class="{{2 < products[11]['rate'] ? 'active' : ''}}")
+		//- 					span(class="{{3 < products[11]['rate'] ? 'active' : ''}}")
+		//- 					span(class="{{4 < products[11]['rate'] ? 'active' : ''}}")
+		//- 			.right
+		//- 				h3 {{products[11]['name']}}
+		//- 				.info-pack
+		//- 					h5 Pet
+		//- 					span {{products[11]['category']}}
+		//- 				.info-pack
+		//- 					h5 Breed Size
+		//- 					span {{products[11]['size']}}
+		//- 				.info-pack
+		//- 					h5 Life Stage
+		//- 					span {{products[11]['life']}}
+		//- 				.info-pack
+		//- 					h5 Category
+		//- 					span {{products[11]['product']}}
+		//- 				.info-pack(data-ng-if="products[11]['brand'] != ''")
+		//- 					h5 Brand
+		//- 					span {{products[11]['brand']}}
+		//- 				.info-pack.force-show
+		//- 					h5 Price
+		//- 					span {{products[11]['price'] | number:0}} THB
+		//- 				.console
+		//- 					button(type='button', style='background-image: url("/images/icon-add-to-cart.png");') Add to Cart
+		//- li.grid-item
+		//- 	.product
+		//- 		a(data-ui-sref='shop.detail({id:"{{pad("00000", products[12]["id"], true)}}", name:"{{products[12]["segment"]}}"})')
+		//- 			.left
+		//- 				.image
+		//- 					img(src='/images/shop/{{products[12]["category"]}}/{{products[12]["image"]}}')
+		//- 				.rate
+		//- 					span(class="{{0 < products[12]['rate'] ? 'active' : ''}}")
+		//- 					span(class="{{1 < products[12]['rate'] ? 'active' : ''}}")
+		//- 					span(class="{{2 < products[12]['rate'] ? 'active' : ''}}")
+		//- 					span(class="{{3 < products[12]['rate'] ? 'active' : ''}}")
+		//- 					span(class="{{4 < products[12]['rate'] ? 'active' : ''}}")
+		//- 			.right
+		//- 				h3 {{products[12]['name']}}
+		//- 				.info-pack
+		//- 					h5 Pet
+		//- 					span {{products[12]['category']}}
+		//- 				.info-pack
+		//- 					h5 Breed Size
+		//- 					span {{products[12]['size']}}
+		//- 				.info-pack
+		//- 					h5 Life Stage
+		//- 					span {{products[12]['life']}}
+		//- 				.info-pack
+		//- 					h5 Category
+		//- 					span {{products[12]['product']}}
+		//- 				.info-pack(data-ng-if="products[12]['brand'] != ''")
+		//- 					h5 Brand
+		//- 					span {{products[12]['brand']}}
+		//- 				.info-pack.force-show
+		//- 					h5 Price
+		//- 					span {{products[12]['price'] | number:0}} THB
+		//- 				.console
+		//- 					button(type='button', style='background-image: url("/images/icon-add-to-cart.png");') Add to Cart
+		//- li.grid-item
+		//- 	.product
+		//- 		a(data-ui-sref='shop.detail({id:"{{pad("00000", products[13]["id"], true)}}", name:"{{products[13]["segment"]}}"})')
+		//- 			.left
+		//- 				.image
+		//- 					img(src='/images/shop/{{products[13]["category"]}}/{{products[13]["image"]}}')
+		//- 				.rate
+		//- 					span(class="{{0 < products[13]['rate'] ? 'active' : ''}}")
+		//- 					span(class="{{1 < products[13]['rate'] ? 'active' : ''}}")
+		//- 					span(class="{{2 < products[13]['rate'] ? 'active' : ''}}")
+		//- 					span(class="{{3 < products[13]['rate'] ? 'active' : ''}}")
+		//- 					span(class="{{4 < products[13]['rate'] ? 'active' : ''}}")
+		//- 			.right
+		//- 				h3 {{products[13]['name']}}
+		//- 				.info-pack
+		//- 					h5 Pet
+		//- 					span {{products[13]['category']}}
+		//- 				.info-pack
+		//- 					h5 Breed Size
+		//- 					span {{products[13]['size']}}
+		//- 				.info-pack
+		//- 					h5 Life Stage
+		//- 					span {{products[13]['life']}}
+		//- 				.info-pack
+		//- 					h5 Category
+		//- 					span {{products[13]['product']}}
+		//- 				.info-pack(data-ng-if="products[13]['brand'] != ''")
+		//- 					h5 Brand
+		//- 					span {{products[13]['brand']}}
+		//- 				.info-pack.force-show
+		//- 					h5 Price
+		//- 					span {{products[13]['price'] | number:0}} THB
+		//- 				.console
+		//- 					button(type='button', style='background-image: url("/images/icon-add-to-cart.png");') Add to Cart
+		//- li.grid-item
+		//- 	.product
+		//- 		a(data-ui-sref='shop.detail({id:"{{pad("00000", products[14]["id"], true)}}", name:"{{products[14]["segment"]}}"})')
+		//- 			.left
+		//- 				.image
+		//- 					img(src='/images/shop/{{products[14]["category"]}}/{{products[14]["image"]}}')
+		//- 				.rate
+		//- 					span(class="{{0 < products[14]['rate'] ? 'active' : ''}}")
+		//- 					span(class="{{1 < products[14]['rate'] ? 'active' : ''}}")
+		//- 					span(class="{{2 < products[14]['rate'] ? 'active' : ''}}")
+		//- 					span(class="{{3 < products[14]['rate'] ? 'active' : ''}}")
+		//- 					span(class="{{4 < products[14]['rate'] ? 'active' : ''}}")
+		//- 			.right
+		//- 				h3 {{products[14]['name']}}
+		//- 				.info-pack
+		//- 					h5 Pet
+		//- 					span {{products[14]['category']}}
+		//- 				.info-pack
+		//- 					h5 Breed Size
+		//- 					span {{products[14]['size']}}
+		//- 				.info-pack
+		//- 					h5 Life Stage
+		//- 					span {{products[14]['life']}}
+		//- 				.info-pack
+		//- 					h5 Category
+		//- 					span {{products[14]['product']}}
+		//- 				.info-pack(data-ng-if="products[14]['brand'] != ''")
+		//- 					h5 Brand
+		//- 					span {{products[14]['brand']}}
+		//- 				.info-pack.force-show
+		//- 					h5 Price
+		//- 					span {{products[14]['price'] | number:0}} THB
+		//- 				.console
+		//- 					button(type='button', style='background-image: url("/images/icon-add-to-cart.png");') Add to Cart
+		li.grid-item
 			.product
-				a(data-ui-sref='shop.detail({id:"{{pad("00000", product.id, true)}}", name:"{{product.segment}}"})')
+				a(data-ui-sref='shop.detail({id:"{{pad("00000", products[15]["id"], true)}}", name:"{{products[15]["segment"]}}"})')
 					.left
 						.image
-							img(src='/images/shop/{{product.category}}/{{product.image}}')
+							img(src='/images/shop/{{products[15]["category"]}}/{{products[15]["image"]}}')
 						.rate
-							span(class="{{0 < product.rate ? 'active' : ''}}")
-							span(class="{{1 < product.rate ? 'active' : ''}}")
-							span(class="{{2 < product.rate ? 'active' : ''}}")
-							span(class="{{3 < product.rate ? 'active' : ''}}")
-							span(class="{{4 < product.rate ? 'active' : ''}}")
+							span(class="{{0 < products[15]['rate'] ? 'active' : ''}}")
+							span(class="{{1 < products[15]['rate'] ? 'active' : ''}}")
+							span(class="{{2 < products[15]['rate'] ? 'active' : ''}}")
+							span(class="{{3 < products[15]['rate'] ? 'active' : ''}}")
+							span(class="{{4 < products[15]['rate'] ? 'active' : ''}}")
 					.right
-						h3 {{product.name}}
+						h3 {{products[15]['name']}}
 						.info-pack
 							h5 Pet
-							span {{product.category}}
+							span {{products[15]['category']}}
 						.info-pack
 							h5 Breed Size
-							span {{product.size}}
+							span {{products[15]['size']}}
 						.info-pack
 							h5 Life Stage
-							span {{product.life}}
+							span {{products[15]['life']}}
 						.info-pack
 							h5 Category
-							span {{product.product}}
-						.info-pack(data-ng-if="product.brand != ''")
+							span {{products[15]['product']}}
+						.info-pack(data-ng-if="products[15]['brand'] != ''")
 							h5 Brand
-							span {{product.brand}}
+							span {{products[15]['brand']}}
 						.info-pack.force-show
 							h5 Price
-							span {{product.price | number:0}} THB
+							span {{products[15]['price'] | number:0}} THB
+						.console
+							button(type='button', style='background-image: url("/images/icon-add-to-cart.png");') Add to Cart
+		li.grid-item
+			.product
+				a(data-ui-sref='shop.detail({id:"{{pad("00000", products[16]["id"], true)}}", name:"{{products[16]["segment"]}}"})')
+					.left
+						.image
+							img(src='/images/shop/{{products[16]["category"]}}/{{products[16]["image"]}}')
+						.rate
+							span(class="{{0 < products[16]['rate'] ? 'active' : ''}}")
+							span(class="{{1 < products[16]['rate'] ? 'active' : ''}}")
+							span(class="{{2 < products[16]['rate'] ? 'active' : ''}}")
+							span(class="{{3 < products[16]['rate'] ? 'active' : ''}}")
+							span(class="{{4 < products[16]['rate'] ? 'active' : ''}}")
+					.right
+						h3 {{products[16]['name']}}
+						.info-pack
+							h5 Pet
+							span {{products[16]['category']}}
+						.info-pack
+							h5 Breed Size
+							span {{products[16]['size']}}
+						.info-pack
+							h5 Life Stage
+							span {{products[16]['life']}}
+						.info-pack
+							h5 Category
+							span {{products[16]['product']}}
+						.info-pack(data-ng-if="products[16]['brand'] != ''")
+							h5 Brand
+							span {{products[16]['brand']}}
+						.info-pack.force-show
+							h5 Price
+							span {{products[16]['price'] | number:0}} THB
+						.console
+							button(type='button', style='background-image: url("/images/icon-add-to-cart.png");') Add to Cart
+		li.grid-item
+			.product
+				a(data-ui-sref='shop.detail({id:"{{pad("00000", products[17]["id"], true)}}", name:"{{products[17]["segment"]}}"})')
+					.left
+						.image
+							img(src='/images/shop/{{products[17]["category"]}}/{{products[17]["image"]}}')
+						.rate
+							span(class="{{0 < products[17]['rate'] ? 'active' : ''}}")
+							span(class="{{1 < products[17]['rate'] ? 'active' : ''}}")
+							span(class="{{2 < products[17]['rate'] ? 'active' : ''}}")
+							span(class="{{3 < products[17]['rate'] ? 'active' : ''}}")
+							span(class="{{4 < products[17]['rate'] ? 'active' : ''}}")
+					.right
+						h3 {{products[17]['name']}}
+						.info-pack
+							h5 Pet
+							span {{products[17]['category']}}
+						.info-pack
+							h5 Breed Size
+							span {{products[17]['size']}}
+						.info-pack
+							h5 Life Stage
+							span {{products[17]['life']}}
+						.info-pack
+							h5 Category
+							span {{products[17]['product']}}
+						.info-pack(data-ng-if="products[17]['brand'] != ''")
+							h5 Brand
+							span {{products[17]['brand']}}
+						.info-pack.force-show
+							h5 Price
+							span {{products[17]['price'] | number:0}} THB
+						.console
+							button(type='button', style='background-image: url("/images/icon-add-to-cart.png");') Add to Cart
+		li.grid-item
+			.product
+				a(data-ui-sref='shop.detail({id:"{{pad("00000", products[18]["id"], true)}}", name:"{{products[18]["segment"]}}"})')
+					.left
+						.image
+							img(src='/images/shop/{{products[18]["category"]}}/{{products[18]["image"]}}')
+						.rate
+							span(class="{{0 < products[18]['rate'] ? 'active' : ''}}")
+							span(class="{{1 < products[18]['rate'] ? 'active' : ''}}")
+							span(class="{{2 < products[18]['rate'] ? 'active' : ''}}")
+							span(class="{{3 < products[18]['rate'] ? 'active' : ''}}")
+							span(class="{{4 < products[18]['rate'] ? 'active' : ''}}")
+					.right
+						h3 {{products[18]['name']}}
+						.info-pack
+							h5 Pet
+							span {{products[18]['category']}}
+						.info-pack
+							h5 Breed Size
+							span {{products[18]['size']}}
+						.info-pack
+							h5 Life Stage
+							span {{products[18]['life']}}
+						.info-pack
+							h5 Category
+							span {{products[18]['product']}}
+						.info-pack(data-ng-if="products[18]['brand'] != ''")
+							h5 Brand
+							span {{products[18]['brand']}}
+						.info-pack.force-show
+							h5 Price
+							span {{products[18]['price'] | number:0}} THB
+						.console
+							button(type='button', style='background-image: url("/images/icon-add-to-cart.png");') Add to Cart
+		li.grid-item
+			.product
+				a(data-ui-sref='shop.detail({id:"{{pad("00000", products[19]["id"], true)}}", name:"{{products[19]["segment"]}}"})')
+					.left
+						.image
+							img(src='/images/shop/{{products[19]["category"]}}/{{products[19]["image"]}}')
+						.rate
+							span(class="{{0 < products[19]['rate'] ? 'active' : ''}}")
+							span(class="{{1 < products[19]['rate'] ? 'active' : ''}}")
+							span(class="{{2 < products[19]['rate'] ? 'active' : ''}}")
+							span(class="{{3 < products[19]['rate'] ? 'active' : ''}}")
+							span(class="{{4 < products[19]['rate'] ? 'active' : ''}}")
+					.right
+						h3 {{products[19]['name']}}
+						.info-pack
+							h5 Pet
+							span {{products[19]['category']}}
+						.info-pack
+							h5 Breed Size
+							span {{products[19]['size']}}
+						.info-pack
+							h5 Life Stage
+							span {{products[19]['life']}}
+						.info-pack
+							h5 Category
+							span {{products[19]['product']}}
+						.info-pack(data-ng-if="products[19]['brand'] != ''")
+							h5 Brand
+							span {{products[19]['brand']}}
+						.info-pack.force-show
+							h5 Price
+							span {{products[19]['price'] | number:0}} THB
+						.console
+							button(type='button', style='background-image: url("/images/icon-add-to-cart.png");') Add to Cart
+		li.grid-item
+			.product
+				a(data-ui-sref='shop.detail({id:"{{pad("00000", products[20]["id"], true)}}", name:"{{products[20]["segment"]}}"})')
+					.left
+						.image
+							img(src='/images/shop/{{products[20]["category"]}}/{{products[20]["image"]}}')
+						.rate
+							span(class="{{0 < products[20]['rate'] ? 'active' : ''}}")
+							span(class="{{1 < products[20]['rate'] ? 'active' : ''}}")
+							span(class="{{2 < products[20]['rate'] ? 'active' : ''}}")
+							span(class="{{3 < products[20]['rate'] ? 'active' : ''}}")
+							span(class="{{4 < products[20]['rate'] ? 'active' : ''}}")
+					.right
+						h3 {{products[20]['name']}}
+						.info-pack
+							h5 Pet
+							span {{products[20]['category']}}
+						.info-pack
+							h5 Breed Size
+							span {{products[20]['size']}}
+						.info-pack
+							h5 Life Stage
+							span {{products[20]['life']}}
+						.info-pack
+							h5 Category
+							span {{products[20]['product']}}
+						.info-pack(data-ng-if="products[20]['brand'] != ''")
+							h5 Brand
+							span {{products[20]['brand']}}
+						.info-pack.force-show
+							h5 Price
+							span {{products[20]['price'] | number:0}} THB
+						.console
+							button(type='button', style='background-image: url("/images/icon-add-to-cart.png");') Add to Cart
+		li.grid-item
+			.product
+				a(data-ui-sref='shop.detail({id:"{{pad("00000", products[21]["id"], true)}}", name:"{{products[21]["segment"]}}"})')
+					.left
+						.image
+							img(src='/images/shop/{{products[21]["category"]}}/{{products[21]["image"]}}')
+						.rate
+							span(class="{{0 < products[21]['rate'] ? 'active' : ''}}")
+							span(class="{{1 < products[21]['rate'] ? 'active' : ''}}")
+							span(class="{{2 < products[21]['rate'] ? 'active' : ''}}")
+							span(class="{{3 < products[21]['rate'] ? 'active' : ''}}")
+							span(class="{{4 < products[21]['rate'] ? 'active' : ''}}")
+					.right
+						h3 {{products[21]['name']}}
+						.info-pack
+							h5 Pet
+							span {{products[21]['category']}}
+						.info-pack
+							h5 Breed Size
+							span {{products[21]['size']}}
+						.info-pack
+							h5 Life Stage
+							span {{products[21]['life']}}
+						.info-pack
+							h5 Category
+							span {{products[21]['product']}}
+						.info-pack(data-ng-if="products[21]['brand'] != ''")
+							h5 Brand
+							span {{products[21]['brand']}}
+						.info-pack.force-show
+							h5 Price
+							span {{products[21]['price'] | number:0}} THB
+						.console
+							button(type='button', style='background-image: url("/images/icon-add-to-cart.png");') Add to Cart
+		li.grid-item
+			.product
+				a(data-ui-sref='shop.detail({id:"{{pad("00000", products[22]["id"], true)}}", name:"{{products[22]["segment"]}}"})')
+					.left
+						.image
+							img(src='/images/shop/{{products[22]["category"]}}/{{products[22]["image"]}}')
+						.rate
+							span(class="{{0 < products[22]['rate'] ? 'active' : ''}}")
+							span(class="{{1 < products[22]['rate'] ? 'active' : ''}}")
+							span(class="{{2 < products[22]['rate'] ? 'active' : ''}}")
+							span(class="{{3 < products[22]['rate'] ? 'active' : ''}}")
+							span(class="{{4 < products[22]['rate'] ? 'active' : ''}}")
+					.right
+						h3 {{products[22]['name']}}
+						.info-pack
+							h5 Pet
+							span {{products[22]['category']}}
+						.info-pack
+							h5 Breed Size
+							span {{products[22]['size']}}
+						.info-pack
+							h5 Life Stage
+							span {{products[22]['life']}}
+						.info-pack
+							h5 Category
+							span {{products[22]['product']}}
+						.info-pack(data-ng-if="products[22]['brand'] != ''")
+							h5 Brand
+							span {{products[22]['brand']}}
+						.info-pack.force-show
+							h5 Price
+							span {{products[22]['price'] | number:0}} THB
+						.console
+							button(type='button', style='background-image: url("/images/icon-add-to-cart.png");') Add to Cart
+		li.grid-item
+			.product
+				a(data-ui-sref='shop.detail({id:"{{pad("00000", products[23]["id"], true)}}", name:"{{products[23]["segment"]}}"})')
+					.left
+						.image
+							img(src='/images/shop/{{products[23]["category"]}}/{{products[23]["image"]}}')
+						.rate
+							span(class="{{0 < products[23]['rate'] ? 'active' : ''}}")
+							span(class="{{1 < products[23]['rate'] ? 'active' : ''}}")
+							span(class="{{2 < products[23]['rate'] ? 'active' : ''}}")
+							span(class="{{3 < products[23]['rate'] ? 'active' : ''}}")
+							span(class="{{4 < products[23]['rate'] ? 'active' : ''}}")
+					.right
+						h3 {{products[23]['name']}}
+						.info-pack
+							h5 Pet
+							span {{products[23]['category']}}
+						.info-pack
+							h5 Breed Size
+							span {{products[23]['size']}}
+						.info-pack
+							h5 Life Stage
+							span {{products[23]['life']}}
+						.info-pack
+							h5 Category
+							span {{products[23]['product']}}
+						.info-pack(data-ng-if="products[23]['brand'] != ''")
+							h5 Brand
+							span {{products[23]['brand']}}
+						.info-pack.force-show
+							h5 Price
+							span {{products[23]['price'] | number:0}} THB
+						.console
+							button(type='button', style='background-image: url("/images/icon-add-to-cart.png");') Add to Cart
+		li.grid-item
+			.product
+				a(data-ui-sref='shop.detail({id:"{{pad("00000", products[24]["id"], true)}}", name:"{{products[24]["segment"]}}"})')
+					.left
+						.image
+							img(src='/images/shop/{{products[24]["category"]}}/{{products[24]["image"]}}')
+						.rate
+							span(class="{{0 < products[24]['rate'] ? 'active' : ''}}")
+							span(class="{{1 < products[24]['rate'] ? 'active' : ''}}")
+							span(class="{{2 < products[24]['rate'] ? 'active' : ''}}")
+							span(class="{{3 < products[24]['rate'] ? 'active' : ''}}")
+							span(class="{{4 < products[24]['rate'] ? 'active' : ''}}")
+					.right
+						h3 {{products[24]['name']}}
+						.info-pack
+							h5 Pet
+							span {{products[24]['category']}}
+						.info-pack
+							h5 Breed Size
+							span {{products[24]['size']}}
+						.info-pack
+							h5 Life Stage
+							span {{products[24]['life']}}
+						.info-pack
+							h5 Category
+							span {{products[24]['product']}}
+						.info-pack(data-ng-if="products[24]['brand'] != ''")
+							h5 Brand
+							span {{products[24]['brand']}}
+						.info-pack.force-show
+							h5 Price
+							span {{products[24]['price'] | number:0}} THB
+						.console
+							button(type='button', style='background-image: url("/images/icon-add-to-cart.png");') Add to Cart
+		li.grid-item
+			.product
+				a(data-ui-sref='shop.detail({id:"{{pad("00000", products[25]["id"], true)}}", name:"{{products[25]["segment"]}}"})')
+					.left
+						.image
+							img(src='/images/shop/{{products[25]["category"]}}/{{products[25]["image"]}}')
+						.rate
+							span(class="{{0 < products[25]['rate'] ? 'active' : ''}}")
+							span(class="{{1 < products[25]['rate'] ? 'active' : ''}}")
+							span(class="{{2 < products[25]['rate'] ? 'active' : ''}}")
+							span(class="{{3 < products[25]['rate'] ? 'active' : ''}}")
+							span(class="{{4 < products[25]['rate'] ? 'active' : ''}}")
+					.right
+						h3 {{products[25]['name']}}
+						.info-pack
+							h5 Pet
+							span {{products[25]['category']}}
+						.info-pack
+							h5 Breed Size
+							span {{products[25]['size']}}
+						.info-pack
+							h5 Life Stage
+							span {{products[25]['life']}}
+						.info-pack
+							h5 Category
+							span {{products[25]['product']}}
+						.info-pack(data-ng-if="products[25]['brand'] != ''")
+							h5 Brand
+							span {{products[25]['brand']}}
+						.info-pack.force-show
+							h5 Price
+							span {{products[25]['price'] | number:0}} THB
+						.console
+							button(type='button', style='background-image: url("/images/icon-add-to-cart.png");') Add to Cart
+		li.grid-item
+			.product
+				a(data-ui-sref='shop.detail({id:"{{pad("00000", products[26]["id"], true)}}", name:"{{products[26]["segment"]}}"})')
+					.left
+						.image
+							img(src='/images/shop/{{products[26]["category"]}}/{{products[26]["image"]}}')
+						.rate
+							span(class="{{0 < products[26]['rate'] ? 'active' : ''}}")
+							span(class="{{1 < products[26]['rate'] ? 'active' : ''}}")
+							span(class="{{2 < products[26]['rate'] ? 'active' : ''}}")
+							span(class="{{3 < products[26]['rate'] ? 'active' : ''}}")
+							span(class="{{4 < products[26]['rate'] ? 'active' : ''}}")
+					.right
+						h3 {{products[26]['name']}}
+						.info-pack
+							h5 Pet
+							span {{products[26]['category']}}
+						.info-pack
+							h5 Breed Size
+							span {{products[26]['size']}}
+						.info-pack
+							h5 Life Stage
+							span {{products[26]['life']}}
+						.info-pack
+							h5 Category
+							span {{products[26]['product']}}
+						.info-pack(data-ng-if="products[26]['brand'] != ''")
+							h5 Brand
+							span {{products[26]['brand']}}
+						.info-pack.force-show
+							h5 Price
+							span {{products[26]['price'] | number:0}} THB
+						.console
+							button(type='button', style='background-image: url("/images/icon-add-to-cart.png");') Add to Cart
+		li.grid-item
+			.product
+				a(data-ui-sref='shop.detail({id:"{{pad("00000", products[27]["id"], true)}}", name:"{{products[27]["segment"]}}"})')
+					.left
+						.image
+							img(src='/images/shop/{{products[27]["category"]}}/{{products[27]["image"]}}')
+						.rate
+							span(class="{{0 < products[27]['rate'] ? 'active' : ''}}")
+							span(class="{{1 < products[27]['rate'] ? 'active' : ''}}")
+							span(class="{{2 < products[27]['rate'] ? 'active' : ''}}")
+							span(class="{{3 < products[27]['rate'] ? 'active' : ''}}")
+							span(class="{{4 < products[27]['rate'] ? 'active' : ''}}")
+					.right
+						h3 {{products[27]['name']}}
+						.info-pack
+							h5 Pet
+							span {{products[27]['category']}}
+						.info-pack
+							h5 Breed Size
+							span {{products[27]['size']}}
+						.info-pack
+							h5 Life Stage
+							span {{products[27]['life']}}
+						.info-pack
+							h5 Category
+							span {{products[27]['product']}}
+						.info-pack(data-ng-if="products[27]['brand'] != ''")
+							h5 Brand
+							span {{products[27]['brand']}}
+						.info-pack.force-show
+							h5 Price
+							span {{products[27]['price'] | number:0}} THB
+						.console
+							button(type='button', style='background-image: url("/images/icon-add-to-cart.png");') Add to Cart
+		li.grid-item
+			.product
+				a(data-ui-sref='shop.detail({id:"{{pad("00000", products[28]["id"], true)}}", name:"{{products[28]["segment"]}}"})')
+					.left
+						.image
+							img(src='/images/shop/{{products[28]["category"]}}/{{products[28]["image"]}}')
+						.rate
+							span(class="{{0 < products[28]['rate'] ? 'active' : ''}}")
+							span(class="{{1 < products[28]['rate'] ? 'active' : ''}}")
+							span(class="{{2 < products[28]['rate'] ? 'active' : ''}}")
+							span(class="{{3 < products[28]['rate'] ? 'active' : ''}}")
+							span(class="{{4 < products[28]['rate'] ? 'active' : ''}}")
+					.right
+						h3 {{products[28]['name']}}
+						.info-pack
+							h5 Pet
+							span {{products[28]['category']}}
+						.info-pack
+							h5 Breed Size
+							span {{products[28]['size']}}
+						.info-pack
+							h5 Life Stage
+							span {{products[28]['life']}}
+						.info-pack
+							h5 Category
+							span {{products[28]['product']}}
+						.info-pack(data-ng-if="products[28]['brand'] != ''")
+							h5 Brand
+							span {{products[28]['brand']}}
+						.info-pack.force-show
+							h5 Price
+							span {{products[28]['price'] | number:0}} THB
+						.console
+							button(type='button', style='background-image: url("/images/icon-add-to-cart.png");') Add to Cart
+		li.grid-item
+			.product
+				a(data-ui-sref='shop.detail({id:"{{pad("00000", products[29]["id"], true)}}", name:"{{products[29]["segment"]}}"})')
+					.left
+						.image
+							img(src='/images/shop/{{products[29]["category"]}}/{{products[29]["image"]}}')
+						.rate
+							span(class="{{0 < products[29]['rate'] ? 'active' : ''}}")
+							span(class="{{1 < products[29]['rate'] ? 'active' : ''}}")
+							span(class="{{2 < products[29]['rate'] ? 'active' : ''}}")
+							span(class="{{3 < products[29]['rate'] ? 'active' : ''}}")
+							span(class="{{4 < products[29]['rate'] ? 'active' : ''}}")
+					.right
+						h3 {{products[29]['name']}}
+						.info-pack
+							h5 Pet
+							span {{products[29]['category']}}
+						.info-pack
+							h5 Breed Size
+							span {{products[29]['size']}}
+						.info-pack
+							h5 Life Stage
+							span {{products[29]['life']}}
+						.info-pack
+							h5 Category
+							span {{products[29]['product']}}
+						.info-pack(data-ng-if="products[29]['brand'] != ''")
+							h5 Brand
+							span {{products[29]['brand']}}
+						.info-pack.force-show
+							h5 Price
+							span {{products[29]['price'] | number:0}} THB
 						.console
 							button(type='button', style='background-image: url("/images/icon-add-to-cart.png");') Add to Cart
 		

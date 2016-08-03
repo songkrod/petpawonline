@@ -23,11 +23,25 @@ angular.module('social').controller('SocialController', [
 
 			$("#content .tabs ul .active").removeClass('active');
 
+			// if ( index == -1 ) {
+			// 	if ( stage == 'social.feeds' || stage == 'social' ) {
+			// 		index = 1;
+			// 	} else if ( stage == 'social.favorite' ) {
+			// 		index = 0;
+			// 	} else if ( stage == 'social.me' ) {
+			// 		index = 2;
+			// 	} else if ( stage == 'social.activity' ) {
+			// 		index = old_index;
+			// 	} else if ( stage == 'social.message' ) {
+			// 		index = 4;
+			// 	}
+			// }
+
 			if ( index == -1 ) {
-				if ( stage == 'social.feeds' || stage == 'social' ) {
-					index = 1;
-				} else if ( stage == 'social.favorite' ) {
+				if ( stage == 'social.favorite' || stage == 'social' ) {
 					index = 0;
+				} else if ( stage == 'social.feeds' ) {
+					index = 1;
 				} else if ( stage == 'social.me' ) {
 					index = 2;
 				} else if ( stage == 'social.activity' ) {

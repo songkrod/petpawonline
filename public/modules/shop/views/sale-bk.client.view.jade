@@ -1,0 +1,38 @@
+.list.grid
+	ul(data-grid-layout)
+		li.grid-item(data-ng-repeat="product in products")
+			.product
+				a(data-ui-sref='shop.detail({id:"{{pad("00000", product.id, true)}}", name:"{{product.segment}}"})')
+					.left
+						.image
+							img(src='/images/shop/{{product.category}}/{{product.image}}')
+							.percent
+								{{product.percent}}%
+						.rate
+							span(data-ng-repeat="i in getNumber(maxRate)", class="{{i < product.rate ? 'active' : ''}}")
+					.right
+						h3 {{product.name}}
+						.info-pack
+							h5 Pet
+							span {{product.category}}
+						.info-pack
+							h5 Breed Size
+							span {{product.size}}
+						.info-pack
+							h5 Life Stage
+							span {{product.life}}
+						.info-pack
+							h5 Category
+							span {{product.product}}
+						.info-pack(data-ng-if="product.brand != ''")
+							h5 Brand
+							span {{product.brand}}
+						.info-pack.force-show
+							h5 Price
+							span.price {{product.new_price | number:0}} THB
+							span.old-price {{product.price | number:0}} THB
+						.console
+							button(type='button', style='background-image: url("/images/icon-add-to-cart.png");') Add to Cart
+		
+.view-option(data-stick-bar, data-stick-to='{"item":"#content .tabs", "gaps":"100"}')
+	a(data-view-mode='{{viewMode}}', data-ng-click='changeViewMode()')

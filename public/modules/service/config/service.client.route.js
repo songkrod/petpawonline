@@ -11,7 +11,7 @@ angular.module('service').config([
 					},
 					"content": {
 						controller: 'ServiceShopController',
-						templateUrl: 'modules/service/views/map.client.views.jade'
+						templateUrl: 'modules/service/views/feeds.client.view.jade'
 					}
 				}
 			}).state('service.shop', {
@@ -19,7 +19,7 @@ angular.module('service').config([
 				views: {
 					"content": {
 						controller: 'ServiceShopController',
-						templateUrl: 'modules/service/views/map.client.views.jade'
+						templateUrl: 'modules/service/views/feeds.client.view.jade'
 					}
 				}
 			}).state('service.hotel', {
@@ -27,7 +27,7 @@ angular.module('service').config([
 				views: {
 					"content": {
 						controller: 'ServiceHotelController',
-						templateUrl: 'modules/service/views/map.client.views.jade'
+						templateUrl: 'modules/service/views/feeds.client.view.jade'
 					}
 				}
 			}).state('service.grooming', {
@@ -35,7 +35,7 @@ angular.module('service').config([
 				views: {
 					"content": {
 						controller: 'ServiceGroomingController',
-						templateUrl: 'modules/service/views/map.client.views.jade'
+						templateUrl: 'modules/service/views/feeds.client.view.jade'
 					}
 				}
 			}).state('service.cafe', {
@@ -43,7 +43,7 @@ angular.module('service').config([
 				views: {
 					"content": {
 						controller: 'ServiceCafeController',
-						templateUrl: 'modules/service/views/map.client.views.jade'
+						templateUrl: 'modules/service/views/feeds.client.view.jade'
 					}
 				}
 			}).state('service.hospital', {
@@ -51,7 +51,7 @@ angular.module('service').config([
 				views: {
 					"content": {
 						controller: 'ServiceHospitalController',
-						templateUrl: 'modules/service/views/map.client.views.jade'
+						templateUrl: 'modules/service/views/feeds.client.view.jade'
 					}
 				}
 			});

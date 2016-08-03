@@ -18,6 +18,8 @@ angular.module('shop').controller('ShopFeedsController', [
 			$('#content .list ul').masonry('layout');
 		}
 
+		// $('#content .list ul').masonry('layout');
+
 		$scope.pad = function (pad, str, padLeft) {
 			if (typeof str === 'undefined') 
 				return pad;
@@ -429,5 +431,10 @@ angular.module('shop').controller('ShopFeedsController', [
 				"rate": getRate()
 			}
 		];
+
+		$scope.itemLength = $scope.products.length;
+
+		// $scope.json = JSON.stringify($scope.products);
+		// console.log($scope.json);
 	}
 ]);

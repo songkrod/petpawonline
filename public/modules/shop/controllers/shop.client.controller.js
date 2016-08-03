@@ -26,11 +26,11 @@ angular.module('shop').controller('ShopController', [
 			$("#content .tabs ul .active").removeClass('active');
 
 			if ( index == -1 ) {
-				if ( stage == 'shop.feeds' || stage == 'shop' || stage == 'shop.detail' ) {
+				if ( stage == 'shop.recommend' || stage == 'shop' ) {
 					index = 0;
-				} else if ( stage == 'shop.sale' ) {
+				} else if ( stage == 'shop.feeds' || stage == 'shop.detail' ) {
 					index = 1;
-				} else if ( stage == 'shop.recommend' ) {
+				} else if ( stage == 'shop.sale' ) {
 					index = 2;
 				} else if ( stage == 'shop.gift' ) {
 					index = 3;

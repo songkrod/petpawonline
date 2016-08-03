@@ -13,11 +13,11 @@ html
 					.wrap
 						ul
 							li.item.social
-								a(data-ui-sref='social.feeds') Social
+								a(data-ui-sref='social.favorite') Social
 							li.item.sale 
 								a(data-ui-sref='sale.buy') Sale
 							li.item.shopping 
-								a(data-ui-sref='shop.feeds') Shopping
+								a(data-ui-sref='shop.recommend') Shopping
 							li.item.service 
 								a(data-ui-sref='service.shop') Service
 		#wrapper(data-ui-view)
@@ -26,7 +26,7 @@ html
 		script(src='/lib/masonry/dist/masonry.pkgd.min.js')
 		script(src='/lib/imagesloaded/imagesloaded.pkgd.min.js')
 		script(src='/lib/jQuery.dotdotdot/src/jquery.dotdotdot.min.js')
-		script(src='/lib/toom/toom.js')
+		script(src='/js/grit.js')
 
 		script(src='/lib/angular/angular.min.js')
 		script(src='/lib/angular-ui-router/release/angular-ui-router.min.js')
@@ -39,6 +39,7 @@ html
 		script(src='/modules/core/directives/masonry.client.directive.js')
 		script(src='/modules/core/directives/stick.client.directive.js')
 		script(src='/modules/core/directives/dot.client.directive.js')
+		script(src='/modules/core/directives/grit.client.directive.js')
 
 		script(src='/modules/user/user.client.module.js')
 		script(src='/modules/user/config/user.client.route.js')
@@ -71,6 +72,10 @@ html
 		script(src='/modules/service/config/service.client.route.js')
 		script(src='/modules/service/controllers/service.client.controller.js')
 		script(src='/modules/service/controllers/shop.client.controller.js')
+		script(src='/modules/service/controllers/hotel.client.controller.js')
+		script(src='/modules/service/controllers/grooming.client.controller.js')
+		script(src='/modules/service/controllers/cafe.client.controller.js')
+		script(src='/modules/service/controllers/hospital.client.controller.js')
 
 		script(src='/modules/social/social.client.module.js')
 		script(src='/modules/social/config/social.client.route.js')

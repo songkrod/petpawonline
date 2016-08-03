@@ -47,6 +47,8 @@ angular.module('shop').controller('ShopSaleController', [
 				"life": "All",
 				"brand": "royal canin",
 				"price": "1230",
+				"new_price": "0",
+				"percent": "0",
 				"rate": Math.round(Math.random() * 5)
 			},
 			{
@@ -60,6 +62,8 @@ angular.module('shop').controller('ShopSaleController', [
 				"life": "All",
 				"brand": "royal canin",
 				"price": "1890",
+				"new_price": "0",
+				"percent": "0",
 				"rate": Math.round(Math.random() * 5)
 			},
 			{
@@ -73,6 +77,8 @@ angular.module('shop').controller('ShopSaleController', [
 				"life": "All",
 				"brand": "royal canin",
 				"price": "1890",
+				"new_price": "0",
+				"percent": "0",
 				"rate": Math.round(Math.random() * 5)
 			},
 			{
@@ -86,6 +92,8 @@ angular.module('shop').controller('ShopSaleController', [
 				"life": "All",
 				"brand": "",
 				"price": "139",
+				"new_price": "0",
+				"percent": "0",
 				"rate": Math.round(Math.random() * 5)
 			},
 			{
@@ -99,6 +107,8 @@ angular.module('shop').controller('ShopSaleController', [
 				"life": "All",
 				"brand": "",
 				"price": "129",
+				"new_price": "0",
+				"percent": "0",
 				"rate": Math.round(Math.random() * 5)
 			},
 			{
@@ -112,6 +122,8 @@ angular.module('shop').controller('ShopSaleController', [
 				"life": "All",
 				"brand": "",
 				"price": "329",
+				"new_price": "0",
+				"percent": "0",
 				"rate": Math.round(Math.random() * 5)
 			},
 			{
@@ -125,6 +137,8 @@ angular.module('shop').controller('ShopSaleController', [
 				"life": "All",
 				"brand": "",
 				"price": "389",
+				"new_price": "0",
+				"percent": "0",
 				"rate": Math.round(Math.random() * 5)
 			},
 			{
@@ -138,6 +152,8 @@ angular.module('shop').controller('ShopSaleController', [
 				"life": "All",
 				"brand": "",
 				"price": "335",
+				"new_price": "0",
+				"percent": "0",
 				"rate": Math.round(Math.random() * 5)
 			},
 			{
@@ -151,6 +167,8 @@ angular.module('shop').controller('ShopSaleController', [
 				"life": "All",
 				"brand": "",
 				"price": "99",
+				"new_price": "0",
+				"percent": "0",
 				"rate": Math.round(Math.random() * 5)
 			},
 			{
@@ -164,6 +182,8 @@ angular.module('shop').controller('ShopSaleController', [
 				"life": "All",
 				"brand": "",
 				"price": "449",
+				"new_price": "0",
+				"percent": "0",
 				"rate": Math.round(Math.random() * 5)
 			},
 			{
@@ -177,6 +197,8 @@ angular.module('shop').controller('ShopSaleController', [
 				"life": "All",
 				"brand": "",
 				"price": "1039",
+				"new_price": "0",
+				"percent": "0",
 				"rate": Math.round(Math.random() * 5)
 			},
 			{
@@ -190,6 +212,8 @@ angular.module('shop').controller('ShopSaleController', [
 				"life": "All",
 				"brand": "",
 				"price": "490",
+				"new_price": "0",
+				"percent": "0",
 				"rate": Math.round(Math.random() * 5)
 			},
 			{
@@ -203,6 +227,8 @@ angular.module('shop').controller('ShopSaleController', [
 				"life": "All",
 				"brand": "",
 				"price": "719",
+				"new_price": "0",
+				"percent": "0",
 				"rate": Math.round(Math.random() * 5)
 			},
 			{
@@ -216,6 +242,8 @@ angular.module('shop').controller('ShopSaleController', [
 				"life": "All",
 				"brand": "",
 				"price": "429",
+				"new_price": "0",
+				"percent": "0",
 				"rate": Math.round(Math.random() * 5)
 			},
 			{
@@ -229,6 +257,8 @@ angular.module('shop').controller('ShopSaleController', [
 				"life": "All",
 				"brand": "Ifex",
 				"price": "1690",
+				"new_price": "0",
+				"percent": "0",
 				"rate": Math.round(Math.random() * 5)
 			},
 			{
@@ -242,6 +272,8 @@ angular.module('shop').controller('ShopSaleController', [
 				"life": "All",
 				"brand": "Friskies",
 				"price": "529",
+				"new_price": "0",
+				"percent": "0",
 				"rate": Math.round(Math.random() * 5)
 			},
 			{
@@ -255,6 +287,8 @@ angular.module('shop').controller('ShopSaleController', [
 				"life": "All",
 				"brand": "Cat'n Joy",
 				"price": "443",
+				"new_price": "0",
+				"percent": "0",
 				"rate": Math.round(Math.random() * 5)
 			},
 			{
@@ -268,6 +302,8 @@ angular.module('shop').controller('ShopSaleController', [
 				"life": "All",
 				"brand": "Whiskas",
 				"price": "259",
+				"new_price": "0",
+				"percent": "0",
 				"rate": Math.round(Math.random() * 5)
 			},
 			{
@@ -281,6 +317,8 @@ angular.module('shop').controller('ShopSaleController', [
 				"life": "All",
 				"brand": "",
 				"price": "149",
+				"new_price": "0",
+				"percent": "0",
 				"rate": Math.round(Math.random() * 5)
 			},
 			{
@@ -294,6 +332,8 @@ angular.module('shop').controller('ShopSaleController', [
 				"life": "All",
 				"brand": "",
 				"price": "439",
+				"new_price": "0",
+				"percent": "0",
 				"rate": Math.round(Math.random() * 5)
 			},
 			{
@@ -307,6 +347,8 @@ angular.module('shop').controller('ShopSaleController', [
 				"life": "All",
 				"brand": "",
 				"price": "829",
+				"new_price": "0",
+				"percent": "0",
 				"rate": Math.round(Math.random() * 5)
 			},
 			{
@@ -320,6 +362,8 @@ angular.module('shop').controller('ShopSaleController', [
 				"life": "All",
 				"brand": "",
 				"price": "429",
+				"new_price": "0",
+				"percent": "0",
 				"rate": Math.round(Math.random() * 5)
 			},
 			{
@@ -333,6 +377,8 @@ angular.module('shop').controller('ShopSaleController', [
 				"life": "All",
 				"brand": "",
 				"price": "159",
+				"new_price": "0",
+				"percent": "0",
 				"rate": Math.round(Math.random() * 5)
 			},
 			{
@@ -346,6 +392,8 @@ angular.module('shop').controller('ShopSaleController', [
 				"life": "All",
 				"brand": "",
 				"price": "319",
+				"new_price": "0",
+				"percent": "0",
 				"rate": Math.round(Math.random() * 5)
 			},
 			{
@@ -359,6 +407,8 @@ angular.module('shop').controller('ShopSaleController', [
 				"life": "All",
 				"brand": "",
 				"price": "3890",
+				"new_price": "0",
+				"percent": "0",
 				"rate": Math.round(Math.random() * 5)
 			},
 			{
@@ -372,6 +422,8 @@ angular.module('shop').controller('ShopSaleController', [
 				"life": "All",
 				"brand": "",
 				"price": "1139",
+				"new_price": "0",
+				"percent": "0",
 				"rate": Math.round(Math.random() * 5)
 			},
 			{
@@ -385,6 +437,8 @@ angular.module('shop').controller('ShopSaleController', [
 				"life": "All",
 				"brand": "",
 				"price": "479",
+				"new_price": "0",
+				"percent": "0",
 				"rate": Math.round(Math.random() * 5)
 			},
 			{
@@ -398,6 +452,8 @@ angular.module('shop').controller('ShopSaleController', [
 				"life": "All",
 				"brand": "",
 				"price": "159",
+				"new_price": "0",
+				"percent": "0",
 				"rate": Math.round(Math.random() * 5)
 			},
 			{
@@ -411,6 +467,8 @@ angular.module('shop').controller('ShopSaleController', [
 				"life": "All",
 				"brand": "",
 				"price": "119",
+				"new_price": "0",
+				"percent": "0",
 				"rate": Math.round(Math.random() * 5)
 			},
 			{
@@ -424,9 +482,17 @@ angular.module('shop').controller('ShopSaleController', [
 				"life": "All",
 				"brand": "",
 				"price": "269",
+				"new_price": "0",
+				"percent": "0",
 				"rate": Math.round(Math.random() * 5)
 			}
 		];
+
+		for (var i = 0; i < $scope.products.length; i++) {
+			var per = 15 + Math.round(Math.random() * 50);
+			$scope.products[i].percent = per;
+			$scope.products[i].new_price = parseInt($scope.products[i].price) - (parseInt($scope.products[i].price) * (per / 100));
+		}
 
 		$scope.getNumber = function(num) {
 			var arr = new Array();

@@ -14,7 +14,7 @@ angular.module('social').controller('SocialFeedsController', [
 				$scope.viewMode = 'list';
 				$('#content .list').removeClass('grid');
 			}
-
+			
 			$('#content .list ul').masonry('layout');
 		}
 	}

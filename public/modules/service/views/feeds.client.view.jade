@@ -1,0 +1,22 @@
+ul.sale-feeds
+	li(data-ng-repeat="item in items")
+		a(href='#show-detail')
+			.pet-image(style='background-image:url("/images/service/{{item.image}}"); background-size:contain;')
+			.detail
+				.w
+					h4 {{item.title}}
+					.price-box
+						span.id {{item.id}}
+						span.date {{item.date}}
+						span.time {{item.time}}
+						span.province {{item.province}}
+						h4.love(data-ng-if="item.love == '1'") Favorite
+						h4.love.active(data-ng-if="item.love == '2'") Favorite
+			.owner
+				h5 {{item.owner.name}}
+				.rate
+					span(class="{{0 < item.rate ? 'active' : ''}}")
+					span(class="{{1 < item.rate ? 'active' : ''}}")
+					span(class="{{2 < item.rate ? 'active' : ''}}")
+					span(class="{{3 < item.rate ? 'active' : ''}}")
+					span(class="{{4 < item.rate ? 'active' : ''}}")
