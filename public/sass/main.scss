@@ -637,7 +637,7 @@ label {
 
 								.image {
 									width: 100%;
-									min-height: 390px;
+									min-height: 310px;
 									position: relative;
 
 									img {
@@ -1131,13 +1131,24 @@ body[data-page='shop'] {
 		.contents {
 			.wrap {
 				.grid {
-					 ul li .product {
-					 	padding: 0;
+					ul li{
+						width: 240px;
+						.product {
+						 	padding: 0;
 
-					 	.left, .right {
-					 		width: 100%;
-					 	}
-					 }
+							.left, .right {
+								width: 100%;
+							}
+
+							.right {
+								h3 {
+									font-size: 16px;
+									padding: 0 10px;
+									@include box-sizing();
+								}
+							}
+						}
+					} 
 
 					.info-pack, .description {
 						display: none;
