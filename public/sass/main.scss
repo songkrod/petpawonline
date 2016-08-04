@@ -310,6 +310,14 @@ label {
 						display: block;
 					}
 
+					h3 {
+						position: absolute;
+						width: 100%;
+						text-align: center;
+						bottom: 40px;
+						left: 0px;
+					}
+
 					img {
 						height: 70px;
 					}
@@ -352,10 +360,10 @@ label {
 		}
 
 		.setting {
-			bottom: 0px;
-			right: 150px;
-			width: 40px;
-			height: 40px;
+			bottom: 8px;
+			right: 0px;
+			width: 30px;
+			height: 30px;
 			position: absolute;
 
 			a {
@@ -712,13 +720,13 @@ label {
 									@include box-sizing();
 
 									button {
-										height: 50px;
-										font-size: 20px;
-										padding-left: 70px;
+										height: 40px;
+										font-size: 16px;
+										padding-left: 60px;
 										font-family: $highlight-font;
 										border: 1px solid $shopping-text;
 										background: left 10px center no-repeat $shopping-text;
-										background-size: 50px;
+										background-size: 40px;
 
 										&:hover {
 											color: $white;
@@ -784,6 +792,11 @@ label {
 
 							.console {
 								background: $white;
+
+								button {
+									height: 40px;
+									font-size: 16px;
+								}
 							}
 						}
 					}
@@ -1522,6 +1535,7 @@ body[data-page='service'] {
 				h4 {
 					width: 100%;
 					display: block;
+					font-weight: bold;
 				}
 
 				.price-box {

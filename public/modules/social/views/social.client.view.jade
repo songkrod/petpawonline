@@ -3,12 +3,15 @@
 		.right
 			ul
 				li.item
+					img(src="/images/icon-follower-header.png")
 					h3 3
 					a(data-ui-sref='user.follower') follower
 				li.item
+					img(src="/images/icon-following-header.png")
 					h3 2
 					a(data-ui-sref='user.following') following
 				li.item
+					img(src="/images/icon-friend-header.png")
 					h3 1
 					a(data-ui-sref='user.friend') friends
 			.bottom
@@ -18,7 +21,7 @@
 				div(data-ng-include="'modules/user/views/profile.client.view.jade'")
 				img(src='/images/profile-bg.png')
 			h4 Petpaw Online
-		.setting: a(data-ui-sref='user.setting', title='Settings'): img(src='/images/icon-setting.png')
+			.setting: a(data-ui-sref='user.setting', title='Settings'): img(src='/images/icon-setting.png')
 #content
 	.contents
 		.wrap(data-ui-view='content')
