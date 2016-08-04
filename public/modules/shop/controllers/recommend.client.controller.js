@@ -12,8 +12,8 @@ angular.module('shop').controller('ShopRecommendController', [
 			"image8": "8.jpg",
 			"image9": "9.jpg",
 			"image10": "10.jpg",
-			"image11": "11.png",
-			"image12": "12.png",
+			"image11": "11.jpg",
+			"image12": "12.jpg",
 			"image13": "13.jpg"
 		};
 	}
