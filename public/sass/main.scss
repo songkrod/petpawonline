@@ -1148,6 +1148,25 @@ body[data-page='shop'] {
 								}
 							}
 						}
+
+						.gift {
+							h3 {
+								font-size: 16px;
+								min-height: 62px;
+							}
+
+							.image {
+								min-height: 250px;
+
+								img {
+									width: 100%;
+									margin: auto 0;
+									position: absolute;
+									top: 0px;
+									bottom: 0px;
+								}
+							}
+						}
 					} 
 
 					.info-pack, .description {
