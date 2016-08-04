@@ -1514,7 +1514,7 @@ body[data-page='service'] {
 				height: 100px;
 				position: absolute;
 				background: center center no-repeat;
-				background-size: contain;
+				background-size: cover;
 			}
 
 			.detail {
@@ -1653,6 +1653,12 @@ body[data-page='service'] {
 				}
 			}
 		}
+	}
+}
+
+.service-feeds {
+	.pet-image {
+		background-size: contain !important;
 	}
 }
 
