@@ -385,8 +385,8 @@ angular.module('social').controller('SocialFavoriteController', [
 				]
 			},
 			{
-				"name": "hunting bird",
-				"dir": "hunting-bird",
+				"name": "raptor bird",
+				"dir": "raptor-bird",
 				"type": [
 					{
 						"name":"Owls",
@@ -415,7 +415,7 @@ angular.module('social').controller('SocialFavoriteController', [
 				"dir": "poultry",
 				"type": [
 					{
-						"name":"Chicken",
+						"name":"Bantams",
 						"image":"chicken.jpg",
 					},
 					{
